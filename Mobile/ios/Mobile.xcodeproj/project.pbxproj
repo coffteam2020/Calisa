@@ -8,18 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* MobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MobileTests.m */; };
+		043844ECBD304F7986A6E039 /* Proxima Nova Alt Extra Condensed Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F7A0C6B82BEC4AE79BAA3F90 /* Proxima Nova Alt Extra Condensed Light.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		18950EF048904914A507BDBC /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61B51B4D76B642E2BC58CDD2 /* PlayfairDisplay-Bold.ttf */; };
+		1CCE604C3D2A46C9BFE1457A /* Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F18AFC5FDD747E5949C225D /* Proxima Nova Thin.otf */; };
+		21B85F77D9364C3B9665CEE4 /* PlayfairDisplay-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DE815F2B403497BBBBFFE6B /* PlayfairDisplay-ExtraBoldItalic.ttf */; };
+		255B4FAC37D444529D3450B5 /* Proxima Nova Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 862DAD0E55CE46ED958860AC /* Proxima Nova Regular.otf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* MobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MobileTests.m */; };
+		2F2B74179B1C4FEBAC1405D6 /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FF6FF14A4074DC0A1C6182C /* Nunito-LightItalic.ttf */; };
+		2FD4F4ABECDD487BA7C650FE /* PlayfairDisplay-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 871F45EC39C041ED9C42D445 /* PlayfairDisplay-BoldItalic.ttf */; };
+		34950D6F9B414896AAABC2E5 /* Proxima Nova ScOsf Condensed Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D07C36005084C6FAC58C5C7 /* Proxima Nova ScOsf Condensed Light.otf */; };
+		36838E8F0C084685BFA80BB0 /* Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4915DD63F74749A4E5A4F5 /* Proxima Nova Black.otf */; };
+		40940E9B219746079194AC50 /* Proxima Nova Extra Condensed Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E24CB83F1F8D473BBA66B8DC /* Proxima Nova Extra Condensed Light.otf */; };
+		531AEFCD546B485FB5164D2A /* Proxima Nova ScOsf Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4EBEA4A689C41518B31FC71 /* Proxima Nova ScOsf Light.otf */; };
+		59EE8016DA2C4D1A8ACA0262 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B270FF2B3FAE47CCA5D0B538 /* Nunito-Bold.ttf */; };
+		68129192E32E45B08346D778 /* PlayfairDisplay-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A4AD972F8441E6ADE24BF1 /* PlayfairDisplay-Black.ttf */; };
+		6B39D9F3F87E4D0AA42CE26C /* Proxima Nova ScOsf Extra Condensed Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1DB842D7630A4F03B140FB14 /* Proxima Nova ScOsf Extra Condensed Light.otf */; };
+		715B618C816E4671B71BF869 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00353904C7C94927BD49D80D /* PlayfairDisplay-Regular.ttf */; };
+		75A4910F530C4A0BBEA6CB56 /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8A2107302E74FD7B4D760BF /* Nunito-BlackItalic.ttf */; };
+		76B4CC0B6E334C0F9FB6F342 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08BA599FE89A4C61AEF58389 /* Nunito-ExtraBold.ttf */; };
+		7BBA1ADF18624492BB7520BD /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C016B4D5DF514946B4BB5F4D /* Nunito-ExtraBoldItalic.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		81E45FE821854DEEB43DD75B /* PlayfairDisplay-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B176A3D98C413B8CA64B29 /* PlayfairDisplay-ExtraBold.ttf */; };
+		8415C94830224B50A728E955 /* PlayfairDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D1AA450AD44B0FB9D6A521 /* PlayfairDisplay-Medium.ttf */; };
+		85533D3B2E7146F6B461C38A /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FEF433C4E674B33AAAF426C /* Nunito-SemiBoldItalic.ttf */; };
+		858438E73D904E1CA391ACED /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BF05EE960444F18822FD160 /* Nunito-Regular.ttf */; };
+		884A73C23ED8471AB39F1F1D /* Proxima Nova Condensed Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C89051E015E14559B22BCCA5 /* Proxima Nova Condensed Light.otf */; };
+		8ED7A92BD0CD4A7E8C1BCD8A /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AE2A4F23F034AA9B87A4115 /* Nunito-Light.ttf */; };
+		98FBB7A21B1241D0B0FE15EF /* Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3215C7B6A2344D50AF0E6764 /* Proxima Nova Bold.otf */; };
 		A05FE467C24654E6D5A4E9C3 /* libPods-Mobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F5F70078943C3DD7021DB3 /* libPods-Mobile.a */; };
 		A8D533DF75FBE43F057249C0 /* libPods-Mobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E142E7342A76F9A1474BF74 /* libPods-Mobile-tvOS.a */; };
+		AD1D4584DC264D49B14B739F /* PlayfairDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F38376E367848C5A9EC4917 /* PlayfairDisplay-Italic.ttf */; };
+		B4F0FA1ED8814A1CA30D3CE6 /* Proxima Nova Alt Condensed Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0EC19A23C6084A40B5274A6D /* Proxima Nova Alt Condensed Light.otf */; };
+		CD8A8E0788214D29AD5F1A08 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C66078291AA54CA0AB160BFF /* Nunito-Italic.ttf */; };
+		CF182BEE74A14140BEAFD410 /* PlayfairDisplay-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50E4E17CCE2044ED989EEDFE /* PlayfairDisplay-MediumItalic.ttf */; };
+		D9F41895B8494C9295A82399 /* PlayfairDisplay-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D91C4F95A2C43379DE11C9E /* PlayfairDisplay-BlackItalic.ttf */; };
+		DA8F8EB5D47B4FCBA365270C /* Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AA804CD87B346D7B0BA33F7 /* Proxima Nova Alt Light.otf */; };
+		E5CD549B133946E0820AF82C /* Proxima Nova Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BFC8DD62EC844A0F879ADED9 /* Proxima Nova Extrabold.otf */; };
+		ED2DF677AB714C34BF58CD13 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 16AB57E8B7B9481E80663165 /* Nunito-SemiBold.ttf */; };
 		EDB9E297F31E8A1D79A1EE71 /* libPods-Mobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2689E85B528A3DAD0435F722 /* libPods-Mobile-tvOSTests.a */; };
+		EE44528D1F124544903D31DE /* PlayfairDisplay-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AF3841EFD624B3FA89F97D1 /* PlayfairDisplay-SemiBoldItalic.ttf */; };
 		EE5B49A8755FB14283644355 /* libPods-Mobile-MobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FB5CFB6B006B6A126149FC /* libPods-Mobile-MobileTests.a */; };
+		EEC195E6FF064464B06B907B /* Proxima.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB6909B02B6140CFBBB337D1 /* Proxima.ttf */; };
+		F3D6CBB7ADAE43FAA5B65E63 /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06F4BFD4474C4FE983076317 /* Nunito-BoldItalic.ttf */; };
+		F9870DAA82494921895BEF5E /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7411AF39B59748D48CDFB4AF /* Nunito-ExtraLight.ttf */; };
+		FA80398B789749FC8D64DA08 /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBE4FF4D027B4687A74EE50A /* Nunito-ExtraLightItalic.ttf */; };
+		FCA4251DA08E49F2B6315455 /* PlayfairDisplay-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FB175CDDE254D4DBFC11C57 /* PlayfairDisplay-SemiBold.ttf */; };
+		FF05896536704FFE997DDBA2 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE4097A9448D4E21877B29AC /* Nunito-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,33 +80,89 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00353904C7C94927BD49D80D /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-Regular.ttf"; path = "../assets/fonts/PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* MobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileTests.m; sourceTree = "<group>"; };
 		03218CCFF54ADBF91E0295F5 /* Pods-Mobile-MobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile-MobileTests.debug.xcconfig"; path = "Target Support Files/Pods-Mobile-MobileTests/Pods-Mobile-MobileTests.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F4BFD4474C4FE983076317 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-BoldItalic.ttf"; path = "../assets/fonts/Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
+		08BA599FE89A4C61AEF58389 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBold.ttf"; path = "../assets/fonts/Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		0EC19A23C6084A40B5274A6D /* Proxima Nova Alt Condensed Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Alt Condensed Light.otf"; path = "../assets/fonts/Proxima Nova Alt Condensed Light.otf"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Calisa Retail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calisa Retail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Mobile/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Mobile/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Mobile/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Mobile/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Mobile/main.m; sourceTree = "<group>"; };
+		16AB57E8B7B9481E80663165 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBold.ttf"; path = "../assets/fonts/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		1BF05EE960444F18822FD160 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		1DB842D7630A4F03B140FB14 /* Proxima Nova ScOsf Extra Condensed Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova ScOsf Extra Condensed Light.otf"; path = "../assets/fonts/Proxima Nova ScOsf Extra Condensed Light.otf"; sourceTree = "<group>"; };
 		2689E85B528A3DAD0435F722 /* libPods-Mobile-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mobile-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27F6EB319BB74BE78992361A /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		2AF3841EFD624B3FA89F97D1 /* PlayfairDisplay-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-SemiBoldItalic.ttf"; path = "../assets/fonts/PlayfairDisplay-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* Mobile-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Mobile-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D4915DD63F74749A4E5A4F5 /* Proxima Nova Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Black.otf"; path = "../assets/fonts/Proxima Nova Black.otf"; sourceTree = "<group>"; };
+		3215C7B6A2344D50AF0E6764 /* Proxima Nova Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Bold.otf"; path = "../assets/fonts/Proxima Nova Bold.otf"; sourceTree = "<group>"; };
+		362375AB6B2042CB8B62D606 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		3AA804CD87B346D7B0BA33F7 /* Proxima Nova Alt Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Alt Light.otf"; path = "../assets/fonts/Proxima Nova Alt Light.otf"; sourceTree = "<group>"; };
+		3DE815F2B403497BBBBFFE6B /* PlayfairDisplay-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-ExtraBoldItalic.ttf"; path = "../assets/fonts/PlayfairDisplay-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		43A4AD972F8441E6ADE24BF1 /* PlayfairDisplay-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-Black.ttf"; path = "../assets/fonts/PlayfairDisplay-Black.ttf"; sourceTree = "<group>"; };
+		4B2BD9C8C9A74F1F80B0FEA3 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		4D07C36005084C6FAC58C5C7 /* Proxima Nova ScOsf Condensed Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova ScOsf Condensed Light.otf"; path = "../assets/fonts/Proxima Nova ScOsf Condensed Light.otf"; sourceTree = "<group>"; };
+		4D91C4F95A2C43379DE11C9E /* PlayfairDisplay-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-BlackItalic.ttf"; path = "../assets/fonts/PlayfairDisplay-BlackItalic.ttf"; sourceTree = "<group>"; };
+		50E4E17CCE2044ED989EEDFE /* PlayfairDisplay-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-MediumItalic.ttf"; path = "../assets/fonts/PlayfairDisplay-MediumItalic.ttf"; sourceTree = "<group>"; };
+		5925EE0DA6994AB59386C571 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		61B51B4D76B642E2BC58CDD2 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-Bold.ttf"; path = "../assets/fonts/PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		62F5F70078943C3DD7021DB3 /* libPods-Mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5EB78204214BA9A668D1DD /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		6DACE15A36F94C96ADDE8C65 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		70167A57D52ABCAED4EEEA20 /* Pods-Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile.debug.xcconfig"; path = "Target Support Files/Pods-Mobile/Pods-Mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		7411AF39B59748D48CDFB4AF /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraLight.ttf"; path = "../assets/fonts/Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 		759B19EB8A4E443EC85ECEC2 /* Pods-Mobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Mobile-tvOSTests/Pods-Mobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		77DB0120A6044BF2AD31610F /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		7E142E7342A76F9A1474BF74 /* libPods-Mobile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mobile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F18AFC5FDD747E5949C225D /* Proxima Nova Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Thin.otf"; path = "../assets/fonts/Proxima Nova Thin.otf"; sourceTree = "<group>"; };
+		7FB175CDDE254D4DBFC11C57 /* PlayfairDisplay-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-SemiBold.ttf"; path = "../assets/fonts/PlayfairDisplay-SemiBold.ttf"; sourceTree = "<group>"; };
+		7FEF433C4E674B33AAAF426C /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBoldItalic.ttf"; path = "../assets/fonts/Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Mobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		849A94AEAF494614B9E13E74 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		862DAD0E55CE46ED958860AC /* Proxima Nova Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Regular.otf"; path = "../assets/fonts/Proxima Nova Regular.otf"; sourceTree = "<group>"; };
+		871F45EC39C041ED9C42D445 /* PlayfairDisplay-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-BoldItalic.ttf"; path = "../assets/fonts/PlayfairDisplay-BoldItalic.ttf"; sourceTree = "<group>"; };
+		87F67FD79CF24307A3BC4345 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		8AE2A4F23F034AA9B87A4115 /* Nunito-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Light.ttf"; path = "../assets/fonts/Nunito-Light.ttf"; sourceTree = "<group>"; };
+		9BD89D7DCD8B438ABDC8F4D2 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		9F38376E367848C5A9EC4917 /* PlayfairDisplay-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-Italic.ttf"; path = "../assets/fonts/PlayfairDisplay-Italic.ttf"; sourceTree = "<group>"; };
+		9FF6FF14A4074DC0A1C6182C /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-LightItalic.ttf"; path = "../assets/fonts/Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		A1AC34C589BB745458660280 /* Pods-Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile.release.xcconfig"; path = "Target Support Files/Pods-Mobile/Pods-Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		A5FB5CFB6B006B6A126149FC /* libPods-Mobile-MobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mobile-MobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6B6375A80543B3A9644B0A /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		AEB76F83DE7B47A5973726B2 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		B270FF2B3FAE47CCA5D0B538 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		B4EBEA4A689C41518B31FC71 /* Proxima Nova ScOsf Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova ScOsf Light.otf"; path = "../assets/fonts/Proxima Nova ScOsf Light.otf"; sourceTree = "<group>"; };
+		BE4097A9448D4E21877B29AC /* Nunito-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Black.ttf"; path = "../assets/fonts/Nunito-Black.ttf"; sourceTree = "<group>"; };
+		BFC8DD62EC844A0F879ADED9 /* Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Extrabold.otf"; path = "../assets/fonts/Proxima Nova Extrabold.otf"; sourceTree = "<group>"; };
+		C016B4D5DF514946B4BB5F4D /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBoldItalic.ttf"; path = "../assets/fonts/Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		C1D1AA450AD44B0FB9D6A521 /* PlayfairDisplay-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-Medium.ttf"; path = "../assets/fonts/PlayfairDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		C230B1BF60B9446FBBFAA838 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		C66078291AA54CA0AB160BFF /* Nunito-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Italic.ttf"; path = "../assets/fonts/Nunito-Italic.ttf"; sourceTree = "<group>"; };
+		C89051E015E14559B22BCCA5 /* Proxima Nova Condensed Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Condensed Light.otf"; path = "../assets/fonts/Proxima Nova Condensed Light.otf"; sourceTree = "<group>"; };
+		CF52A1F35D23481897157F9E /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		D128F2F86B3F2FC623961A62 /* Pods-Mobile-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Mobile-tvOS/Pods-Mobile-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D2C4632412C14FF9867C1B19 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		DA57973634F6B688ABD79A85 /* Pods-Mobile-MobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile-MobileTests.release.xcconfig"; path = "Target Support Files/Pods-Mobile-MobileTests/Pods-Mobile-MobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		DBE4FF4D027B4687A74EE50A /* Nunito-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraLightItalic.ttf"; path = "../assets/fonts/Nunito-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		E1B176A3D98C413B8CA64B29 /* PlayfairDisplay-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-ExtraBold.ttf"; path = "../assets/fonts/PlayfairDisplay-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E24CB83F1F8D473BBA66B8DC /* Proxima Nova Extra Condensed Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Extra Condensed Light.otf"; path = "../assets/fonts/Proxima Nova Extra Condensed Light.otf"; sourceTree = "<group>"; };
+		E58C533366D24032B5F38563 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		E8623866B6810B3FFEBF0119 /* Pods-Mobile-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Mobile-tvOSTests/Pods-Mobile-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F0411F2966D3372E9A8E14B3 /* Pods-Mobile-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Mobile-tvOS/Pods-Mobile-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		F7A0C6B82BEC4AE79BAA3F90 /* Proxima Nova Alt Extra Condensed Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Alt Extra Condensed Light.otf"; path = "../assets/fonts/Proxima Nova Alt Extra Condensed Light.otf"; sourceTree = "<group>"; };
+		F8A2107302E74FD7B4D760BF /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-BlackItalic.ttf"; path = "../assets/fonts/Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FB6909B02B6140CFBBB337D1 /* Proxima.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Proxima.ttf; path = ../assets/fonts/Proxima.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +261,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E26FE36CA06F28D8D0AAC549 /* Pods */,
+				E2B36229069C4B3DA2F633C4 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -174,7 +271,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Mobile.app */,
+				13B07F961A680F5B00A75B9A /* Calisa Retail.app */,
 				00E356EE1AD99517003FC87E /* MobileTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* Mobile-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* Mobile-tvOSTests.xctest */,
@@ -194,8 +291,70 @@
 				759B19EB8A4E443EC85ECEC2 /* Pods-Mobile-tvOSTests.debug.xcconfig */,
 				E8623866B6810B3FFEBF0119 /* Pods-Mobile-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E2B36229069C4B3DA2F633C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE4097A9448D4E21877B29AC /* Nunito-Black.ttf */,
+				F8A2107302E74FD7B4D760BF /* Nunito-BlackItalic.ttf */,
+				B270FF2B3FAE47CCA5D0B538 /* Nunito-Bold.ttf */,
+				06F4BFD4474C4FE983076317 /* Nunito-BoldItalic.ttf */,
+				08BA599FE89A4C61AEF58389 /* Nunito-ExtraBold.ttf */,
+				C016B4D5DF514946B4BB5F4D /* Nunito-ExtraBoldItalic.ttf */,
+				7411AF39B59748D48CDFB4AF /* Nunito-ExtraLight.ttf */,
+				DBE4FF4D027B4687A74EE50A /* Nunito-ExtraLightItalic.ttf */,
+				C66078291AA54CA0AB160BFF /* Nunito-Italic.ttf */,
+				8AE2A4F23F034AA9B87A4115 /* Nunito-Light.ttf */,
+				9FF6FF14A4074DC0A1C6182C /* Nunito-LightItalic.ttf */,
+				1BF05EE960444F18822FD160 /* Nunito-Regular.ttf */,
+				16AB57E8B7B9481E80663165 /* Nunito-SemiBold.ttf */,
+				7FEF433C4E674B33AAAF426C /* Nunito-SemiBoldItalic.ttf */,
+				43A4AD972F8441E6ADE24BF1 /* PlayfairDisplay-Black.ttf */,
+				4D91C4F95A2C43379DE11C9E /* PlayfairDisplay-BlackItalic.ttf */,
+				61B51B4D76B642E2BC58CDD2 /* PlayfairDisplay-Bold.ttf */,
+				871F45EC39C041ED9C42D445 /* PlayfairDisplay-BoldItalic.ttf */,
+				E1B176A3D98C413B8CA64B29 /* PlayfairDisplay-ExtraBold.ttf */,
+				3DE815F2B403497BBBBFFE6B /* PlayfairDisplay-ExtraBoldItalic.ttf */,
+				9F38376E367848C5A9EC4917 /* PlayfairDisplay-Italic.ttf */,
+				C1D1AA450AD44B0FB9D6A521 /* PlayfairDisplay-Medium.ttf */,
+				50E4E17CCE2044ED989EEDFE /* PlayfairDisplay-MediumItalic.ttf */,
+				00353904C7C94927BD49D80D /* PlayfairDisplay-Regular.ttf */,
+				7FB175CDDE254D4DBFC11C57 /* PlayfairDisplay-SemiBold.ttf */,
+				2AF3841EFD624B3FA89F97D1 /* PlayfairDisplay-SemiBoldItalic.ttf */,
+				0EC19A23C6084A40B5274A6D /* Proxima Nova Alt Condensed Light.otf */,
+				F7A0C6B82BEC4AE79BAA3F90 /* Proxima Nova Alt Extra Condensed Light.otf */,
+				3AA804CD87B346D7B0BA33F7 /* Proxima Nova Alt Light.otf */,
+				2D4915DD63F74749A4E5A4F5 /* Proxima Nova Black.otf */,
+				3215C7B6A2344D50AF0E6764 /* Proxima Nova Bold.otf */,
+				C89051E015E14559B22BCCA5 /* Proxima Nova Condensed Light.otf */,
+				E24CB83F1F8D473BBA66B8DC /* Proxima Nova Extra Condensed Light.otf */,
+				BFC8DD62EC844A0F879ADED9 /* Proxima Nova Extrabold.otf */,
+				862DAD0E55CE46ED958860AC /* Proxima Nova Regular.otf */,
+				4D07C36005084C6FAC58C5C7 /* Proxima Nova ScOsf Condensed Light.otf */,
+				1DB842D7630A4F03B140FB14 /* Proxima Nova ScOsf Extra Condensed Light.otf */,
+				B4EBEA4A689C41518B31FC71 /* Proxima Nova ScOsf Light.otf */,
+				7F18AFC5FDD747E5949C225D /* Proxima Nova Thin.otf */,
+				FB6909B02B6140CFBBB337D1 /* Proxima.ttf */,
+				6A5EB78204214BA9A668D1DD /* AntDesign.ttf */,
+				27F6EB319BB74BE78992361A /* Entypo.ttf */,
+				77DB0120A6044BF2AD31610F /* EvilIcons.ttf */,
+				E58C533366D24032B5F38563 /* Feather.ttf */,
+				362375AB6B2042CB8B62D606 /* FontAwesome.ttf */,
+				AEB76F83DE7B47A5973726B2 /* FontAwesome5_Brands.ttf */,
+				4B2BD9C8C9A74F1F80B0FEA3 /* FontAwesome5_Regular.ttf */,
+				5925EE0DA6994AB59386C571 /* FontAwesome5_Solid.ttf */,
+				849A94AEAF494614B9E13E74 /* Fontisto.ttf */,
+				CF52A1F35D23481897157F9E /* Foundation.ttf */,
+				6DACE15A36F94C96ADDE8C65 /* Ionicons.ttf */,
+				87F67FD79CF24307A3BC4345 /* MaterialCommunityIcons.ttf */,
+				C230B1BF60B9446FBBFAA838 /* MaterialIcons.ttf */,
+				AC6B6375A80543B3A9644B0A /* Octicons.ttf */,
+				D2C4632412C14FF9867C1B19 /* SimpleLineIcons.ttf */,
+				9BD89D7DCD8B438ABDC8F4D2 /* Zocial.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +369,7 @@
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				5F18344DE4C897E11FEAE173 /* [CP] Copy Pods Resources */,
+				32A238C2C28F71B1AA10EB4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +392,9 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				280714FB1035DEC3DE7E1EA4 /* [CP] Copy Pods Resources */,
+				AA934A357AD217DA9F960952 /* [CP] Embed Pods Frameworks */,
+				9F285B164D19823E0E1F5A72 /* [CP-User] [NOTIFEE] Config */,
+				03AEE22465627311BBF1AE1F /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -239,7 +402,7 @@
 			);
 			name = Mobile;
 			productName = Mobile;
-			productReference = 13B07F961A680F5B00A75B9A /* Mobile.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Calisa Retail.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* Mobile-tvOS */ = {
@@ -342,6 +505,46 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				FF05896536704FFE997DDBA2 /* Nunito-Black.ttf in Resources */,
+				75A4910F530C4A0BBEA6CB56 /* Nunito-BlackItalic.ttf in Resources */,
+				59EE8016DA2C4D1A8ACA0262 /* Nunito-Bold.ttf in Resources */,
+				F3D6CBB7ADAE43FAA5B65E63 /* Nunito-BoldItalic.ttf in Resources */,
+				76B4CC0B6E334C0F9FB6F342 /* Nunito-ExtraBold.ttf in Resources */,
+				7BBA1ADF18624492BB7520BD /* Nunito-ExtraBoldItalic.ttf in Resources */,
+				F9870DAA82494921895BEF5E /* Nunito-ExtraLight.ttf in Resources */,
+				FA80398B789749FC8D64DA08 /* Nunito-ExtraLightItalic.ttf in Resources */,
+				CD8A8E0788214D29AD5F1A08 /* Nunito-Italic.ttf in Resources */,
+				8ED7A92BD0CD4A7E8C1BCD8A /* Nunito-Light.ttf in Resources */,
+				2F2B74179B1C4FEBAC1405D6 /* Nunito-LightItalic.ttf in Resources */,
+				858438E73D904E1CA391ACED /* Nunito-Regular.ttf in Resources */,
+				ED2DF677AB714C34BF58CD13 /* Nunito-SemiBold.ttf in Resources */,
+				85533D3B2E7146F6B461C38A /* Nunito-SemiBoldItalic.ttf in Resources */,
+				68129192E32E45B08346D778 /* PlayfairDisplay-Black.ttf in Resources */,
+				D9F41895B8494C9295A82399 /* PlayfairDisplay-BlackItalic.ttf in Resources */,
+				18950EF048904914A507BDBC /* PlayfairDisplay-Bold.ttf in Resources */,
+				2FD4F4ABECDD487BA7C650FE /* PlayfairDisplay-BoldItalic.ttf in Resources */,
+				81E45FE821854DEEB43DD75B /* PlayfairDisplay-ExtraBold.ttf in Resources */,
+				21B85F77D9364C3B9665CEE4 /* PlayfairDisplay-ExtraBoldItalic.ttf in Resources */,
+				AD1D4584DC264D49B14B739F /* PlayfairDisplay-Italic.ttf in Resources */,
+				8415C94830224B50A728E955 /* PlayfairDisplay-Medium.ttf in Resources */,
+				CF182BEE74A14140BEAFD410 /* PlayfairDisplay-MediumItalic.ttf in Resources */,
+				715B618C816E4671B71BF869 /* PlayfairDisplay-Regular.ttf in Resources */,
+				FCA4251DA08E49F2B6315455 /* PlayfairDisplay-SemiBold.ttf in Resources */,
+				EE44528D1F124544903D31DE /* PlayfairDisplay-SemiBoldItalic.ttf in Resources */,
+				B4F0FA1ED8814A1CA30D3CE6 /* Proxima Nova Alt Condensed Light.otf in Resources */,
+				043844ECBD304F7986A6E039 /* Proxima Nova Alt Extra Condensed Light.otf in Resources */,
+				DA8F8EB5D47B4FCBA365270C /* Proxima Nova Alt Light.otf in Resources */,
+				36838E8F0C084685BFA80BB0 /* Proxima Nova Black.otf in Resources */,
+				98FBB7A21B1241D0B0FE15EF /* Proxima Nova Bold.otf in Resources */,
+				884A73C23ED8471AB39F1F1D /* Proxima Nova Condensed Light.otf in Resources */,
+				40940E9B219746079194AC50 /* Proxima Nova Extra Condensed Light.otf in Resources */,
+				E5CD549B133946E0820AF82C /* Proxima Nova Extrabold.otf in Resources */,
+				255B4FAC37D444529D3450B5 /* Proxima Nova Regular.otf in Resources */,
+				34950D6F9B414896AAABC2E5 /* Proxima Nova ScOsf Condensed Light.otf in Resources */,
+				6B39D9F3F87E4D0AA42CE26C /* Proxima Nova ScOsf Extra Condensed Light.otf in Resources */,
+				531AEFCD546B485FB5164D2A /* Proxima Nova ScOsf Light.otf in Resources */,
+				1CCE604C3D2A46C9BFE1457A /* Proxima Nova Thin.otf in Resources */,
+				EEC195E6FF064464B06B907B /* Proxima.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +580,16 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		03AEE22465627311BBF1AE1F /* [CP-User] [RNFB] Core Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] [RNFB] Core Configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\nset -e\n\n_MAX_LOOKUPS=2;\n_SEARCH_RESULT=''\n_RN_ROOT_EXISTS=''\n_CURRENT_LOOKUPS=1\n_JSON_ROOT=\"'react-native'\"\n_JSON_FILE_NAME='firebase.json'\n_JSON_OUTPUT_BASE64='e30=' # { }\n_CURRENT_SEARCH_DIR=${PROJECT_DIR}\n_PLIST_BUDDY=/usr/libexec/PlistBuddy\n_TARGET_PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n_DSYM_PLIST=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n# plist arrays\n_PLIST_ENTRY_KEYS=()\n_PLIST_ENTRY_TYPES=()\n_PLIST_ENTRY_VALUES=()\n\nfunction setPlistValue {\n  echo \"info:      setting plist entry '$1' of type '$2' in file '$4'\"\n  ${_PLIST_BUDDY} -c \"Add :$1 $2 '$3'\" $4 || echo \"info:      '$1' already exists\"\n}\n\nfunction getFirebaseJsonKeyValue () {\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    ruby -e \"require 'rubygems';require 'json'; output=JSON.parse('$1'); puts output[$_JSON_ROOT]['$2']\"\n  else\n    echo \"\"\n  fi;\n}\n\nfunction jsonBoolToYesNo () {\n  if [[ $1 == \"false\" ]]; then\n    echo \"NO\"\n  elif [[ $1 == \"true\" ]]; then\n    echo \"YES\"\n  else echo \"NO\"\n  fi\n}\n\necho \"info: -> RNFB build script started\"\necho \"info: 1) Locating ${_JSON_FILE_NAME} file:\"\n\nif [[ -z ${_CURRENT_SEARCH_DIR} ]]; then\n  _CURRENT_SEARCH_DIR=$(pwd)\nfi;\n\nwhile true; do\n  _CURRENT_SEARCH_DIR=$(dirname \"$_CURRENT_SEARCH_DIR\")\n  if [[ \"$_CURRENT_SEARCH_DIR\" == \"/\" ]] || [[ ${_CURRENT_LOOKUPS} -gt ${_MAX_LOOKUPS} ]]; then break; fi;\n  echo \"info:      ($_CURRENT_LOOKUPS of $_MAX_LOOKUPS) Searching in '$_CURRENT_SEARCH_DIR' for a ${_JSON_FILE_NAME} file.\"\n  _SEARCH_RESULT=$(find \"$_CURRENT_SEARCH_DIR\" -maxdepth 2 -name ${_JSON_FILE_NAME} -print | head -n 1)\n  if [[ ${_SEARCH_RESULT} ]]; then\n    echo \"info:      ${_JSON_FILE_NAME} found at $_SEARCH_RESULT\"\n    break;\n  fi;\n  _CURRENT_LOOKUPS=$((_CURRENT_LOOKUPS+1))\ndone\n\nif [[ ${_SEARCH_RESULT} ]]; then\n  _JSON_OUTPUT_RAW=$(cat \"${_SEARCH_RESULT}\")\n  _RN_ROOT_EXISTS=$(ruby -e \"require 'rubygems';require 'json'; output=JSON.parse('$_JSON_OUTPUT_RAW'); puts output[$_JSON_ROOT]\" || echo '')\n\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    _JSON_OUTPUT_BASE64=$(python -c 'import json,sys,base64;print(base64.b64encode(json.dumps(json.loads(open('\"'${_SEARCH_RESULT}'\"').read())['${_JSON_ROOT}'])))' || echo \"e30=\")\n  fi\n\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n\n  # config.messaging_auto_init_enabled\n  _MESSAGING_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"messaging_auto_init_enabled\")\n  if [[ $_MESSAGING_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseMessagingAutoInitEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_MESSAGING_AUTO_INIT\")\")\n  fi\n\n  # config.crashlytics_disable_auto_disabler - undocumented for now - mainly for debugging, document if becomes usful\n  _CRASHLYTICS_AUTO_DISABLE_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"crashlytics_disable_auto_disabler\")\n  if [[ $_CRASHLYTICS_AUTO_DISABLE_ENABLED == \"true\" ]]; then\n    echo \"Disabled Crashlytics auto disabler.\" # do nothing\n  else\n    _PLIST_ENTRY_KEYS+=(\"FirebaseCrashlyticsCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"NO\")\n  fi\n\n  # config.admob_delay_app_measurement_init\n  _ADMOB_DELAY_APP_MEASUREMENT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"admob_delay_app_measurement_init\")\n  if [[ $_ADMOB_DELAY_APP_MEASUREMENT == \"true\" ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GADDelayAppMeasurementInit\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"YES\")\n  fi\n\n  # config.admob_ios_app_id\n  _ADMOB_IOS_APP_ID=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"admob_ios_app_id\")\n  if [[ $_ADMOB_IOS_APP_ID ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GADApplicationIdentifier\")\n    _PLIST_ENTRY_TYPES+=(\"string\")\n    _PLIST_ENTRY_VALUES+=(\"$_ADMOB_IOS_APP_ID\")\n  fi\nelse\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n  echo \"warning:   A firebase.json file was not found, whilst this file is optional it is recommended to include it to configure firebase services in React Native Firebase.\"\nfi;\n\necho \"info: 2) Injecting Info.plist entries: \"\n\n# Log out the keys we're adding\nfor i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n  echo \"    ->  $i) ${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\"\ndone\n\nfor plist in \"${_TARGET_PLIST}\" \"${_DSYM_PLIST}\" ; do\n  if [[ -f \"${plist}\" ]]; then\n\n    # paths with spaces break the call to setPlistValue. temporarily modify\n    # the shell internal field separator variable (IFS), which normally \n    # includes spaces, to consist only of line breaks\n    oldifs=$IFS\n    IFS=\"\n\"\n\n    for i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n      setPlistValue \"${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\" \"${plist}\"\n    done\n\n    # restore the original internal field separator value\n    IFS=$oldifs\n  else\n    echo \"warning:   A Info.plist build output file was not found (${plist})\"\n  fi\ndone\n\necho \"info: <- RNFB build script finished\"\n\n";
+		};
 		280714FB1035DEC3DE7E1EA4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,10 +597,42 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Mobile/Pods-Mobile-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +653,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		32A238C2C28F71B1AA10EB4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mobile-MobileTests/Pods-Mobile-MobileTests-frameworks.sh",
+				"${PODS_ROOT}/../../node_modules/@notifee/react-native/ios/NotifeeCore.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotifeeCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mobile-MobileTests/Pods-Mobile-MobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		3DE2621F69540583F62B7BF2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -460,10 +723,42 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Mobile-MobileTests/Pods-Mobile-MobileTests-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +786,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F285B164D19823E0E1F5A72 /* [CP-User] [NOTIFEE] Config */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] [NOTIFEE] Config";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\nset -e\n\n_MAX_LOOKUPS=2;\n_SEARCH_RESULT=''\n_RN_ROOT_EXISTS=''\n_CURRENT_LOOKUPS=1\n_JSON_ROOT=\"'ios'\"\n_JSON_FILE_NAME='notifee.config.json'\n_JSON_OUTPUT_BASE64='e30=' # { }\n_CURRENT_SEARCH_DIR=${PROJECT_DIR}\n_PLIST_BUDDY=/usr/libexec/PlistBuddy\n_TARGET_PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n_DSYM_PLIST=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n# plist arrays\n_PLIST_ENTRY_KEYS=()\n_PLIST_ENTRY_TYPES=()\n_PLIST_ENTRY_VALUES=()\n\nfunction setPlistValue {\n  echo \"info:      setting plist entry '$1' of type '$2' in file '$4'\"\n  ${_PLIST_BUDDY} -c \"Add :$1 $2 '$3'\" \"$4\" || echo \"info:      '$1' already exists\"\n}\n\necho \"info: -> NOTIFEE build script started\"\necho \"info: 1) Locating ${_JSON_FILE_NAME} file:\"\n\nif [[ -z ${_CURRENT_SEARCH_DIR} ]]; then\n  _CURRENT_SEARCH_DIR=$(pwd)\nfi;\n\nwhile true; do\n  _CURRENT_SEARCH_DIR=$(dirname \"$_CURRENT_SEARCH_DIR\")\n  if [[ \"$_CURRENT_SEARCH_DIR\" == \"/\" ]] || [[ ${_CURRENT_LOOKUPS} -gt ${_MAX_LOOKUPS} ]]; then break; fi;\n  echo \"info:      ($_CURRENT_LOOKUPS of $_MAX_LOOKUPS) Searching in '$_CURRENT_SEARCH_DIR' for a ${_JSON_FILE_NAME} file.\"\n  _SEARCH_RESULT=$(find \"$_CURRENT_SEARCH_DIR\" -maxdepth 2 -name ${_JSON_FILE_NAME} -print | head -n 1)\n  if [[ ${_SEARCH_RESULT} ]]; then\n    echo \"info:      ${_JSON_FILE_NAME} found at $_SEARCH_RESULT\"\n    break;\n  fi;\n  _CURRENT_LOOKUPS=$((_CURRENT_LOOKUPS+1))\ndone\n\nif [[ ${_SEARCH_RESULT} ]]; then\n  _JSON_OUTPUT_RAW=$(cat \"${_SEARCH_RESULT}\")\n  _RN_ROOT_EXISTS=$(ruby -e \"require 'rubygems';require 'json'; output=JSON.parse('$_JSON_OUTPUT_RAW'); puts output[$_JSON_ROOT]\" || echo '')\n\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    _JSON_OUTPUT_BASE64=$(python -c 'import json,sys,base64;print(base64.b64encode(json.dumps(json.loads(open('\"'${_SEARCH_RESULT}'\"').read())['${_JSON_ROOT}'])))' || echo \"e30=\")\n  fi\n\n  _PLIST_ENTRY_KEYS+=(\"notifee_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\nelse\n  _PLIST_ENTRY_KEYS+=(\"notifee_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n  echo \"warning:   A notifee.config.json file was not found.\"\nfi;\n\necho \"info: 2) Injecting Info.plist entries: \"\n\n# Log out the keys we're adding\nfor i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n  echo \"    ->  $i) ${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\"\ndone\n\nfor plist in \"${_TARGET_PLIST}\" \"${_DSYM_PLIST}\" ; do\n  if [[ -f ${plist} ]]; then\n    for i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n      setPlistValue \"${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\" \"${plist}\"\n    done\n  else\n    echo \"warning:   A Info.plist build output file was not found (${plist})\"\n  fi\ndone\n\necho \"info: <- NOTIFEE build script finished\"\n";
+		};
+		AA934A357AD217DA9F960952 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mobile/Pods-Mobile-frameworks.sh",
+				"${PODS_ROOT}/../../node_modules/@notifee/react-native/ios/NotifeeCore.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotifeeCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mobile/Pods-Mobile-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CFA353A7EE41CDC914FDCB06 /* [CP] Check Pods Manifest.lock */ = {
@@ -656,6 +979,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Mobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -664,8 +988,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Mobile;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.calisa.retail;
+				PRODUCT_NAME = "Calisa Retail";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -679,6 +1003,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Mobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -686,8 +1011,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Mobile;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.calisa.retail;
+				PRODUCT_NAME = "Calisa Retail";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
