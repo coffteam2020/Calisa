@@ -23,12 +23,12 @@ const MainScreenNavigator = createStackNavigator(
 // SwitchNavigator for using the multiple stack in the same route
 const AppBottombarSwitchNavigator = createAnimatedSwitchNavigator(
   {
-    SplashScreen: {screen: SplashScreen},
+    // SplashScreen: {screen: SplashScreen},
     // Auth: {screen: MainScreenNavigator},
-    // HomeScreen: {screen: HomeScreen},
+    HomeScreen: {screen: HomeScreen},
   },
   {
-    initialRouteName: 'SplashScreen',
+    initialRouteName: 'HomeScreen',
     mode: 'modal',
     headerMode: 'none',
     // transition: (

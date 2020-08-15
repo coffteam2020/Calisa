@@ -23,93 +23,11 @@ const optionalConfigObject = {
 };
 const HomeScreen = (props) => {
   const {colorsApp} = props.theme;
-  useEffect(() => {}, []);
-  const logout = async () => {
-    await IALocalStorage.resetLocalStorage();
-    NavigationService.navigate(ScreenNames.SplashScreen);
-  };
-
-  const authenWithTouchId = async () => {
-    TouchID.authenticate(
-      'to authenticate for next login with biometrics',
-      optionalConfigObject,
-    )
-      .then(async (success) => {
-        await IALocalStorage.setDeviceEmail('');
-      })
-      .catch((error) => {
-        alert('Xác thực thất bại');
-      });
-  };
-
-  const showAlertAskToAutoLogin = () => {
-    Alert.alert(
-      'Thông báo',
-      'Bạn có muốn bật tính năng đăng nhập nhanh, hoặc xoá đăng nhập nhanh?',
-      [
-        {
-          text: 'Huỷ',
-          onPress: async () => await IALocalStorage.setDeviceEmail(''),
-          style: 'cancel',
-        },
-        {
-          text: 'Giữ',
-          onPress: () => {
-            authenWithTouchId();
-          },
-        },
-      ],
-      {cancelable: false},
-    );
-  };
-
   return (
     <View style={[containerStyle.center, containerStyle.defaultBackground]}>
       <StatusBar barStyle={colorsApp.statusBar} />
       <SafeAreaView>
-        <View
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-          }}>
-          <TextNormal
-            props={props}
-            style={[
-              containerStyle.textHeaderSmallCenter,
-              {width: ScreenWidth / 4},
-            ]}
-            text={''}
-          />
-          <TextNormal
-            props={props}
-            style={[
-              containerStyle.textHeaderSmallCenter,
-              {width: ScreenWidth / 3},
-            ]}
-            text={'Home'}
-          />
-          <TextNormal
-            props={props}
-            clickable
-            onPress={() => logout()}
-            style={[
-              containerStyle.textContentSmall,
-              {
-                width: ScreenWidth / 4,
-                textAlign: 'right',
-                paddingEnd: 20,
-                marginTop: 5,
-              },
-            ]}
-            text={'Logout'}
-          />
-        </View>
-        <View style={styles.content}>
-          <WebView
-            style={{height: '100%', width: ScreenWidth}}
-            source={{uri: 'http://171.235.25.249/auth'}}
-          />
-        </View>
+        
       </SafeAreaView>
     </View>
   );
