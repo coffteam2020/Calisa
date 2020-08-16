@@ -13,4 +13,8 @@ export const images = {
   party: require('./imgs/party.png'),
   recommend: require('./imgs/recommend.png'),
   backgroundBtnProduct: require('./imgs/daily.png'),
+  banner1: require('./imgs/banner.png'),
+  banner2: require('./imgs/banner2.png'),
+  vector: require('./imgs/vector.png'),
+  flash: require('./imgs/flash.png'),
 };

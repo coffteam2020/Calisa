@@ -288,7 +288,7 @@ export const containerStyle = StyleSheet.create({
     fontFamily: fonts.family.nunito.extraBold,
   },
   textHeaderSmall: {
-    fontSize: FONTSIZES.xAvg,
+    fontSize: FONTSIZES.avg,
     fontFamily: fonts.family.nunito.bold,
   },
   textHeaderSmallCenter: {

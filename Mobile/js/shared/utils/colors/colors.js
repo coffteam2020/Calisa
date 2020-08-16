@@ -45,7 +45,7 @@ export const colors = {
   textDefaultWithOpacity: '#626262',
   whiteWithOpacity: '#fbfbfb',
   borderWhiteLess: '#313133',
-  blue: '#08182b',
+  blue: '#189EFF',
   yellow: '#b89438',
   transparent: '#00FFFFFF',
   black_title: '#212224',

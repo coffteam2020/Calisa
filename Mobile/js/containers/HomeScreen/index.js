@@ -21,6 +21,7 @@ import Service from '../../api/Service';
 import FastImage from 'react-native-fast-image';
 import {images} from '../../../assets';
 import TextNormal from '../../shared/components/Text/TextNormal';
+import {colors} from '../../shared/utils/colors/colors';
 const MOCK_BANNER = [
   {
     index: 0,
@@ -59,6 +60,16 @@ const MOCK_PRODUCT_BTNS = [
     image: images.ingredient,
   },
 ];
+const MOCK_PRODUCT_BANNERS = [
+  {
+    index: 0,
+    image: images.banner1,
+  },
+  {
+    index: 1,
+    image: images.banner2,
+  },
+];
 const HomeScreen = (props) => {
   const {colorsApp} = props.theme;
   const [] = useState([]);
@@ -86,16 +97,19 @@ const HomeScreen = (props) => {
           <FastImage
             source={{uri: MOCK_BANNER[0].imgUrl}}
             style={styles.slide1}
+            resizeMode="cover"
           />
         </View>
-        <View style={styles.slide2}>
+        <View style={styles.slide1}>
           <FastImage
+            resizeMode="cover"
             source={{uri: MOCK_BANNER[1].imgUrl}}
             style={styles.slide1}
           />
         </View>
-        <View style={styles.slide3}>
+        <View style={styles.slide1}>
           <FastImage
+            resizeMode="cover"
             source={{uri: MOCK_BANNER[2].imgUrl}}
             style={styles.slide1}
           />
@@ -175,6 +189,73 @@ const HomeScreen = (props) => {
       </View>
     );
   };
+  const btnCategoriesBanner = () => {
+    return (
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{
+          alignSelf: 'center',
+          paddingLeft: 20,
+          paddingEnd: 20,
+          marginEnd: 20,
+          marginTop: 40,
+        }}
+        style={{marginEnd: 20}}>
+        {MOCK_PRODUCT_BANNERS.map((item) => {
+          return (
+            <FastImage
+              resizeMode="contain"
+              source={item?.image}
+              style={styles.slide2}
+            />
+          );
+        })}
+      </ScrollView>
+    );
+  };
+  const productDealDaily = () => {
+    return (
+      <View
+        style={{
+          width: ScreenWidth * 0.9,
+          height: 50,
+          backgroundColor: colors.blue,
+        }}>
+        <ImageBackground
+          source={images.vector}
+          style={{
+            width: ScreenWidth * 0.9,
+            height: 50,
+            justifyContent: 'center',
+            flexDirection: 'row',
+            alignItems: 'center',
+            zIndex: 10,
+          }}
+          resizeMode="stretch">
+          <TextNormal
+            text="Sản phẩm Deal theo ngày"
+            style={[
+              containerStyle.textHeaderSmall,
+              {color: colors.whiteBackground},
+              containerStyle.defaultTextMarginEnd,
+            ]}
+          />
+          <Image source={images.flash} style={{width: 20, height: 50}} />
+          <TextNormal
+            clickable
+            onPress={() => {}}
+            text="XEM THÊM"
+            style={[
+              containerStyle.textDefaultContent,
+              {color: colors.whiteBackground, zIndex: 100},
+              containerStyle.defaultTextMarginLeft,
+            ]}
+          />
+        </ImageBackground>
+      </View>
+    );
+  };
   return (
     <View style={[containerStyle.defaultBackground]}>
       <StatusBar barStyle={colorsApp.statusBar} />
@@ -182,11 +263,14 @@ const HomeScreen = (props) => {
       <SafeAreaView>
         <ScrollView
           keyboardShouldPersistTaps="handled"
-          style={{height: '100%'}}>
+          contentContainerStyle={{paddingBottom: 50}}
+          style={{height: '100%', paddingBottom: 50}}>
           <View style={styles.container}>
             <Searchbar style={styles.search} placeholder="Search" />
             {swipe()}
             {btnCategories()}
+            {btnCategoriesBanner()}
+            {productDealDaily()}
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -198,16 +282,27 @@ export default withTheme(HomeScreen);
 
 const styles = StyleSheet.create({
   slide1: {
-    width: ScreenWidth * 0.90,
+    width: ScreenWidth * 0.9,
     alignSelf: 'center',
     height: ScreenWidth * 0.35,
     borderRadius: 20,
   },
+  slide2: {
+    width: ScreenWidth * 0.7,
+    alignSelf: 'center',
+    height: ScreenWidth * 0.55,
+    borderRadius: 20,
+    marginEnd: 20,
+    overflow: 'hidden',
+  },
   swipe: {
     alignItems: 'center',
-    // width: '90%',
     height: ScreenWidth * 0.35,
     marginTop: 15,
+  },
+  swipe2: {
+    alignItems: 'center',
+    marginTop: 55,
   },
   container: {
     paddingTop: ScreenHeight / 10,
