@@ -17,4 +17,5 @@ export const images = {
   banner2: require('./imgs/banner2.png'),
   vector: require('./imgs/vector.png'),
   flash: require('./imgs/flash.png'),
+  header: require('./imgs/header.png'),
 };
