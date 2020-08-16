@@ -45,10 +45,9 @@ const firebaseConfig = {
 };
 const App = () => {
   const [currentScreen, setCurrentScreen] = useState('');
-  const {homeStore, userStore} = useStores();
+  const {homeStore} = useStores();
   const colorScheme = Appearance.getColorScheme();
   const [isVisible, setIsVisible] = useState(false);
-  userStore?.setCurrentChatRoom('');
   const setThemeChange = () => {};
   const disableConsole = () => {
     console.log('App started in', initialMode, 'mode', colorScheme);

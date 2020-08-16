@@ -19,8 +19,11 @@ export const styles = StyleSheet.create({
     width: ScreenWidth / 3,
     height: ScreenWidth / 3,
   },
+  // wrapper: {},
+  slide1: {
+    width: '100%',
+    height: ScreenWidth * 0.35,
+    borderRadius: 10,
+  },
 });
-
-export default {
-  styles,
-};
+export default {styles};

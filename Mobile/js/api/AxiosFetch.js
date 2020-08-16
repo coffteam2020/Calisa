@@ -12,7 +12,7 @@ import {Alert} from 'react-native';
 import {NavigationService} from '../navigation';
 import {ScreenNames} from '../route/ScreenNames';
 
-export const APP_URL = 'http://115.75.195.93/ogps-api/';
+export const APP_URL = 'http://calisa.techer.vn/api/';
 
 const AxiosInstance = Axios.create({
   timeout: 200000,
@@ -125,21 +125,6 @@ export async function AxiosFetcher({
         '_' +
         LogManager.parseJsonObjectToJsonString(error ? error : error?.message),
     );
-    if (error?.response?.data?.error.includes('Unauthorized')) {
-      Alert.alert(
-        'Session expired',
-        'You term has been closed. Please try to login again',
-        [
-          {
-            text: 'OK',
-            onPress: () => {
-              NavigationService.navigate(ScreenNames.LoginScreen);
-            },
-          },
-        ],
-      );
-      return;
-    }
     return error?.response ? error?.response : error;
   }
 }

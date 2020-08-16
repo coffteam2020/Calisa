@@ -179,12 +179,12 @@ export const containerStyle = StyleSheet.create({
   shadow:
     Platform.OS === 'ios'
       ? {
-          shadowColor: colors.black_lessy,
+          shadowColor: colors.black,
           shadowOffset: {
             width: 0,
             height: 2,
           },
-          shadowOpacity: 0.25,
+          shadowOpacity: 0.35,
           shadowRadius: 5.84,
         }
       : {elevation: 5},

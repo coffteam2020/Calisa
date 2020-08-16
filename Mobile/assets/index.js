@@ -8,4 +8,9 @@ export const images = {
   background: require('./imgs/background.png'),
   btnCart: require('./imgs/btnCart.png'),
   btnCartFocused: require('./imgs/btnCartFocused.png'),
+  daily: require('./imgs/daily_bg.png'),
+  ingredient: require('./imgs/ingredient.png'),
+  party: require('./imgs/party.png'),
+  recommend: require('./imgs/recommend.png'),
+  backgroundBtnProduct: require('./imgs/daily.png'),
 };

@@ -68,6 +68,7 @@
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.10.1",
     "react-native-svg": "^9.13.6",
+    "react-native-swiper": "^1.6.0",
     "react-native-touch-id": "^4.4.1",
     "react-native-vector-icons": "^7.0.0",
     "react-native-webview": "^9.4.0",
