@@ -3,7 +3,7 @@ import React from 'react';
 import {StatusBar, View, SafeAreaView} from 'react-native';
 import {withTheme} from 'react-native-paper';
 import {containerStyle} from '../../themes/styles';
-const HomeScreen = (props) => {
+const NotificationScreen = (props) => {
   const {colorsApp} = props.theme;
   return (
     <View style={[containerStyle.center, containerStyle.defaultBackground]}>
@@ -13,4 +13,4 @@ const HomeScreen = (props) => {
   );
 };
 
-export default withTheme(HomeScreen);
+export default withTheme(NotificationScreen);

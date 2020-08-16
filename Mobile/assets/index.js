@@ -6,4 +6,6 @@ export const images = {
   faceId: require('./imgs/faceId.png'),
   title: require('./imgs/title.png'),
   background: require('./imgs/background.png'),
+  btnCart: require('./imgs/btnCart.png'),
+  btnCartFocused: require('./imgs/btnCartFocused.png'),
 };
