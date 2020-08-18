@@ -7,6 +7,7 @@ import LoginScreen from '../containers/LoginScreen/index';
 import HomeScreen from '../containers/HomeScreen/index';
 import ProfileScreen from '../containers/ProfileScreen/index';
 import CartScreen from '../containers/CartScreen/index';
+import ProductListByCategoryScreen from '../containers/ProductListByCategoryScreen/index';
 import NotificationScreen from '../containers/NotificationScreen/index';
 import FavouriteScreen from '../containers/FavouriteScreen/index';
 import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
@@ -112,23 +113,26 @@ const Tabs = createBottomTabNavigator(
     tabBarComponent: (props) => <Tabbar {...props} />,
   },
 );
-// SwitchNavigator for using the multiple stack in the same route
-const AppBottombarSwitchNavigator = createAnimatedSwitchNavigator(
+const AuthedStack = createStackNavigator(
   {
-    // SplashScreen: {screen: SplashScreen},
-    // Auth: {screen: MainScreenNavigator},
     HomeScreen: {screen: Tabs},
+    ProductListByCategoryScreen: {screen: ProductListByCategoryScreen},
   },
   {
     initialRouteName: 'HomeScreen',
     mode: 'modal',
     headerMode: 'none',
-    // transition: (
-    //   <Transition.Together>
-    //     <Transition.Out type="fade" durationMs={300} interpolation="easeIn" />
-    //     <Transition.In type="fade" durationMs={200} />
-    //   </Transition.Together>
-    // ),
+  },
+);
+// SwitchNavigator for using the multiple stack in the same route
+const AppBottombarSwitchNavigator = createAnimatedSwitchNavigator(
+  {
+    HomeScreen: {screen: AuthedStack},
+  },
+  {
+    initialRouteName: 'HomeScreen',
+    mode: 'modal',
+    headerMode: 'none',
   },
 );
 

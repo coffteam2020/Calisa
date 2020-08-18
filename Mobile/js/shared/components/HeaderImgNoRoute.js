@@ -15,7 +15,7 @@ import TextNormal from './Text/TextNormal';
 import {colors} from '../utils/colors/colors';
 import {NavigationService} from '../../navigation';
 
-const HeaderImg = ({hasBack, title, rightIco}) => {
+const HeaderImgNoRoute = ({hasBack, title, rightIco}) => {
   return (
     <View style={styles.content}>
       <ImageBackground
@@ -72,7 +72,7 @@ const HeaderImg = ({hasBack, title, rightIco}) => {
   );
 };
 
-export default HeaderImg;
+export default HeaderImgNoRoute;
 
 const styles = StyleSheet.create({
   content: {

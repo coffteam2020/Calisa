@@ -1,29 +1,27 @@
 /* eslint-disable react-native/no-inline-styles */
-/* eslint-disable react-native/no-inline-style */
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {
   StatusBar,
   View,
   SafeAreaView,
-  ScrollView,
   StyleSheet,
-  TouchableOpacity,
-  Image,
   ImageBackground,
+  Image,
 } from 'react-native';
 import {withTheme, Searchbar} from 'react-native-paper';
 import {containerStyle} from '../../themes/styles';
-import TopBackground from '../../shared/components/TopBackground';
-import {ScreenHeight, ScreenWidth} from '../../shared/utils/dimension/Divices';
-import {useStores} from '../../store/useStore';
+import HeaderImg from '../../shared/components/HeaderImg';
 import Swiper from 'react-native-swiper';
-import Service from '../../api/Service';
+import {ScreenWidth, ScreenHeight} from '../../shared/utils/dimension/Divices';
 import FastImage from 'react-native-fast-image';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import {images} from '../../../assets';
 import TextNormal from '../../shared/components/Text/TextNormal';
 import {colors} from '../../shared/utils/colors/colors';
 import {NavigationService} from '../../navigation';
-import {ScreenNames} from '../../route/ScreenNames';
+import {useStores} from '../../store/useStore';
+import {useObserver} from 'mobx-react';
 const MOCK_BANNER = [
   {
     index: 0,
@@ -40,54 +38,13 @@ const MOCK_BANNER = [
       'https://res.cloudinary.com/grohealth/image/upload/c_fill,f_auto,fl_lossy,h_650,q_auto,w_1085,x_0,y_0/v1583843120/DCUK/Content/Surprisingly-High-Carb-Food.png',
   },
 ];
-const MOCK_PRODUCT_BTNS = [
-  {
-    index: 0,
-    title: 'SP đi chợ mỗi ngày',
-    image: images.daily,
-    onPress: () => {
-      NavigationService.navigate(ScreenNames.ProductListByCategoryScreen);
-    },
-  },
-  {
-    index: 1,
-    title: 'Menu gợi ý',
-    image: images.recommend,
-  },
-  {
-    index: 2,
-    title: 'SP dành cho Party/tiệc nhậu',
-    image: images.party,
-  },
-  {
-    index: 3,
-    title: 'Gia vị',
-    image: images.ingredient,
-  },
-];
-const MOCK_PRODUCT_BANNERS = [
-  {
-    index: 0,
-    image: images.banner1,
-  },
-  {
-    index: 1,
-    image: images.banner2,
-  },
-];
-const HomeScreen = (props) => {
+const ProductListByCategoryScreen = (props) => {
   const {colorsApp} = props.theme;
-  const [] = useState([]);
+  const [product, setProduct] = useState([]);
   const {userStore} = useStores();
-
-  useEffect(() => {
-    getProducts();
-  }, []);
-  const getProducts = async () => {
-    Service.getCategories().then((data) => {
-      userStore.setCategories(data?.content || []);
-    });
-  };
+  // const getProducts = async () => {
+  //   Services
+  // }
   const swipe = () => {
     return (
       <Swiper
@@ -122,18 +79,11 @@ const HomeScreen = (props) => {
       </Swiper>
     );
   };
-  const btnCategories = () => {
+  const renderProducts = () => {
+    let categories = userStore?.categories.slice() || [];
     return (
-      <View
-        style={{
-          flexDirection: 'row',
-          height: ScreenWidth / 4,
-          width: '90%',
-          zIndex: 10,
-          marginTop: 20,
-          justifyContent: 'space-between',
-        }}>
-        {MOCK_PRODUCT_BTNS.map((item) => {
+      <ScrollView style={{flexDirection: 'row'}} horizontal>
+        {(categories || []).map((item) => {
           return (
             <View>
               <TouchableOpacity
@@ -151,7 +101,6 @@ const HomeScreen = (props) => {
                     justifyContent: 'center',
                     alignItems: 'center',
                   },
-                  containerStyle.shadow,
                 ]}>
                 <ImageBackground
                   source={images.backgroundBtnProduct}
@@ -165,13 +114,13 @@ const HomeScreen = (props) => {
                   ]}>
                   <Image
                     resizeMethod="resize"
-                    resizeMode="contain"
-                    source={item?.image}
+                    resizeMode="cover"
+                    source={{uri: item?.image?.url}}
                     style={[
                       {
                         width: ScreenWidth / 5,
                         height: ScreenWidth / 5,
-                        borderRadius: 10,
+                        borderRadius: 20,
                       },
                     ]}
                   />
@@ -191,99 +140,60 @@ const HomeScreen = (props) => {
             </View>
           );
         })}
-      </View>
-    );
-  };
-  const btnCategoriesBanner = () => {
-    return (
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{
-          alignSelf: 'center',
-          paddingLeft: 20,
-          paddingEnd: 20,
-          marginEnd: 20,
-          marginTop: 40,
-        }}
-        style={{marginEnd: 20}}>
-        {MOCK_PRODUCT_BANNERS.map((item) => {
-          return (
-            <FastImage
-              resizeMode="contain"
-              source={item?.image}
-              style={styles.slide2}
-            />
-          );
-        })}
       </ScrollView>
     );
   };
-  const productDealDaily = () => {
-    return (
-      <View
-        style={{
-          width: ScreenWidth * 0.9,
-          height: 50,
-          backgroundColor: colors.blue,
-        }}>
-        <ImageBackground
-          source={images.vector}
-          style={{
-            width: ScreenWidth * 0.9,
-            height: 50,
-            justifyContent: 'center',
-            flexDirection: 'row',
-            alignItems: 'center',
-            zIndex: 10,
-          }}
-          resizeMode="stretch">
-          <TextNormal
-            text="Sản phẩm Deal theo ngày"
-            style={[
-              containerStyle.textHeaderSmall,
-              {color: colors.whiteBackground},
-              containerStyle.defaultTextMarginEnd,
-            ]}
-          />
-          <Image source={images.flash} style={{width: 20, height: 50}} />
-          <TextNormal
-            clickable
-            onPress={() => {}}
-            text="XEM THÊM"
-            style={[
-              containerStyle.textDefaultContent,
-              {color: colors.whiteBackground, zIndex: 100},
-              containerStyle.defaultTextMarginLeft,
-            ]}
-          />
-        </ImageBackground>
-      </View>
-    );
-  };
-  return (
+  return useObserver(() => (
     <View style={[containerStyle.defaultBackground]}>
       <StatusBar barStyle={colorsApp.statusBar} />
-      <TopBackground />
-      <SafeAreaView>
-        <ScrollView
-          keyboardShouldPersistTaps="handled"
-          contentContainerStyle={{paddingBottom: 50}}
-          style={{height: '100%', paddingBottom: 50}}>
-          <View style={styles.container}>
-            <Searchbar style={styles.search} placeholder="Search" />
-            {swipe()}
-            {btnCategories()}
-            {btnCategoriesBanner()}
-            {productDealDaily()}
+      <ScrollView>
+        <ImageBackground
+          source={images.header}
+          style={[
+            styles.content,
+            {
+              alignItems: 'center',
+              alignContent: 'center',
+              justifyContent: 'center',
+            },
+          ]}
+          resizeMethod="resize"
+          resizeMode="cover">
+          <Searchbar style={styles.search} placeholder="Search" />
+          <View
+            style={{
+              flexDirection: 'row',
+              padding: 10,
+              alignItems: 'center',
+              alignSelf: 'flex-start',
+              marginLeft: 20,
+              justifyContent: 'flex-start',
+            }}>
+            <TouchableOpacity onPress={() => NavigationService.goBack()}>
+              <Ionicons name="home" size={25} color={colors.whiteBackground} />
+            </TouchableOpacity>
+            <TextNormal
+              style={{color: colors.whiteBackground}}
+              text="> Sản phẩm đi chợ mỗi ngày"
+            />
           </View>
-        </ScrollView>
-      </SafeAreaView>
+        </ImageBackground>
+        <View style={styles.container}>
+          {swipe()}
+          <View style={{padding: 20}}>
+            <TextNormal
+              text="Mua sắm theo danh mục"
+              style={[{color: 'black'}, containerStyle.textHeaderSmall]}
+            />
+            {renderProducts()}
+          </View>
+        </View>
+      </ScrollView>
     </View>
-  );
+  ));
 };
 
-export default withTheme(HomeScreen);
+export default withTheme(ProductListByCategoryScreen);
 
 const styles = StyleSheet.create({
   slide1: {
@@ -295,13 +205,13 @@ const styles = StyleSheet.create({
   slide2: {
     width: ScreenWidth * 0.7,
     alignSelf: 'center',
-    height: ScreenWidth * 0.55,
+    height: ScreenWidth * 0.35,
     borderRadius: 20,
     marginEnd: 20,
     overflow: 'hidden',
   },
   swipe: {
-    alignItems: 'center',
+    // alignItems: 'center',
     height: ScreenWidth * 0.35,
     marginTop: 15,
   },
@@ -310,12 +220,20 @@ const styles = StyleSheet.create({
     marginTop: 55,
   },
   container: {
-    paddingTop: ScreenHeight / 10,
-    alignItems: 'center',
-    height: '100%',
+    // paddingTop: ScreenHeight / 2,
+    // height: ScreenHeight,
     width: '100%',
   },
   search: {
     width: '90%',
+    height: 35,
+    marginTop: 15,
+    alignSelf: 'center',
+    alignItems: 'center',
+  },
+  content: {
+    width: ScreenWidth,
+    // height: ScreenHeight / 6,
+    paddingTop: 20,
   },
 });
