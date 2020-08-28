@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: ScreenHeight / 4,
     position: 'absolute',
-    top: 0,
+    top: -20,
     left: 0,
     zIndex: -1,
   },

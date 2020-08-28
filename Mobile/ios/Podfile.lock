@@ -1,4 +1,9 @@
 PODS:
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
   - boost-for-react-native (1.63.0)
   - BVLinearGradient (2.5.6):
     - React
@@ -13,6 +18,20 @@ PODS:
     - React-Core (= 0.63.2)
     - React-jsi (= 0.63.2)
     - ReactCommon/turbomodule/core (= 0.63.2)
+  - FBSDKCoreKit (5.8.0):
+    - FBSDKCoreKit/Basics (= 5.8.0)
+    - FBSDKCoreKit/Core (= 5.8.0)
+  - FBSDKCoreKit/Basics (5.8.0)
+  - FBSDKCoreKit/Core (5.8.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.8.0):
+    - FBSDKLoginKit/Login (= 5.8.0)
+  - FBSDKLoginKit/Login (5.8.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKShareKit (5.8.0):
+    - FBSDKShareKit/Share (= 5.8.0)
+  - FBSDKShareKit/Share (5.8.0):
+    - FBSDKCoreKit (~> 5.0)
   - Firebase/CoreOnly (6.28.1):
     - FirebaseCore (= 6.9.1)
   - FirebaseCore (6.9.1):
@@ -82,10 +101,22 @@ PODS:
   - glog (0.3.5)
   - GoogleDataTransport (7.0.0):
     - nanopb (~> 1.30905.0)
+  - GoogleSignIn (5.0.2):
+    - AppAuth (~> 1.2)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleUtilities/Environment (6.7.1):
     - PromisesObjC (~> 1.2)
   - GoogleUtilities/Logger (6.7.1):
     - GoogleUtilities/Environment
+  - GTMAppAuth (1.0.0):
+    - AppAuth/Core (~> 1.0)
+    - GTMSessionFetcher (~> 1.1)
+  - GTMSessionFetcher (1.4.0):
+    - GTMSessionFetcher/Full (= 1.4.0)
+  - GTMSessionFetcher/Core (1.4.0)
+  - GTMSessionFetcher/Full (1.4.0):
+    - GTMSessionFetcher/Core (= 1.4.0)
   - libwebp (1.1.0):
     - libwebp/demux (= 1.1.0)
     - libwebp/mux (= 1.1.0)
@@ -140,6 +171,9 @@ PODS:
     - Folly (= 2020.01.13.00)
     - RCTRequired (= 0.63.2)
     - React-Core (= 0.63.2)
+  - RCTYouTube (2.0.1):
+    - React
+    - YoutubePlayer-in-WKWebView (~> 0.3.1)
   - React (0.63.2):
     - React-Core (= 0.63.2)
     - React-Core/DevSupport (= 0.63.2)
@@ -302,6 +336,20 @@ PODS:
   - React-jsinspector (0.63.2)
   - react-native-appearance (0.3.4):
     - React
+  - react-native-fbsdk (1.1.2):
+    - React
+    - react-native-fbsdk/Core (= 1.1.2)
+    - react-native-fbsdk/Login (= 1.1.2)
+    - react-native-fbsdk/Share (= 1.1.2)
+  - react-native-fbsdk/Core (1.1.2):
+    - FBSDKCoreKit (= 5.8)
+    - React
+  - react-native-fbsdk/Login (1.1.2):
+    - FBSDKLoginKit (= 5.8)
+    - React
+  - react-native-fbsdk/Share (1.1.2):
+    - FBSDKShareKit (= 5.8)
+    - React
   - react-native-netinfo (5.0.0):
     - React
   - react-native-safe-area-context (0.7.3):
@@ -384,10 +432,13 @@ PODS:
     - React
     - SDWebImage (~> 5.8)
     - SDWebImageWebPCoder (~> 0.6.1)
-  - RNFBApp (8.3.0):
+  - RNFBApp (8.3.1):
     - Firebase/CoreOnly (~> 6.28.1)
     - React
   - RNGestureHandler (1.7.0):
+    - React
+  - RNGoogleSignin (4.0.3):
+    - GoogleSignIn (~> 5.0.0)
     - React
   - RNLocalize (1.4.1):
     - React
@@ -414,12 +465,16 @@ PODS:
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
+  - YoutubePlayer-in-WKWebView (0.3.4)
 
 DEPENDENCIES:
   - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
+  - FBSDKCoreKit (~> 5.8.0)
+  - FBSDKLoginKit (~> 5.8.0)
+  - FBSDKShareKit (~> 5.8.0)
   - Flipper (~> 0.41.1)
   - Flipper-DoubleConversion (= 1.1.7)
   - Flipper-Folly (~> 2.2)
@@ -441,6 +496,7 @@ DEPENDENCIES:
   - FlipperKit/SKIOSNetworkPlugin (~> 0.41.1)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - GoogleSignIn (~> 5.0.0)
   - lottie-ios (from `../node_modules/lottie-ios`)
   - lottie-react-native (from `../node_modules/lottie-react-native`)
   - Permission-BluetoothPeripheral (from `../node_modules/react-native-permissions/ios/BluetoothPeripheral.podspec`)
@@ -458,6 +514,7 @@ DEPENDENCIES:
   - Permission-Reminders (from `../node_modules/react-native-permissions/ios/Reminders.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
+  - RCTYouTube (from `../node_modules/react-native-youtube`)
   - React (from `../node_modules/react-native/`)
   - React-callinvoker (from `../node_modules/react-native/ReactCommon/callinvoker`)
   - React-Core (from `../node_modules/react-native/`)
@@ -469,6 +526,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - react-native-appearance (from `../node_modules/react-native-appearance`)
+  - react-native-fbsdk (from `../node_modules/react-native-fbsdk`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -491,6 +549,7 @@ DEPENDENCIES:
   - RNFastImage (from `../node_modules/react-native-fast-image`)
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - "RNGoogleSignin (from `../node_modules/@react-native-community/google-signin`)"
   - RNLocalize (from `../node_modules/react-native-localize`)
   - "RNNotifee (from `../node_modules/@notifee/react-native`)"
   - RNPermissions (from `../node_modules/react-native-permissions`)
@@ -503,9 +562,13 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AppAuth
     - boost-for-react-native
     - CocoaAsyncSocket
     - CocoaLibEvent
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
     - Firebase
     - FirebaseCore
     - FirebaseCoreDiagnostics
@@ -517,7 +580,10 @@ SPEC REPOS:
     - Flipper-RSocket
     - FlipperKit
     - GoogleDataTransport
+    - GoogleSignIn
     - GoogleUtilities
+    - GTMAppAuth
+    - GTMSessionFetcher
     - libwebp
     - nanopb
     - OpenSSL-Universal
@@ -525,6 +591,7 @@ SPEC REPOS:
     - SDWebImage
     - SDWebImageWebPCoder
     - YogaKit
+    - YoutubePlayer-in-WKWebView
 
 EXTERNAL SOURCES:
   BVLinearGradient:
@@ -573,6 +640,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
     :path: "../node_modules/react-native/Libraries/TypeSafety"
+  RCTYouTube:
+    :path: "../node_modules/react-native-youtube"
   React:
     :path: "../node_modules/react-native/"
   React-callinvoker:
@@ -591,6 +660,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   react-native-appearance:
     :path: "../node_modules/react-native-appearance"
+  react-native-fbsdk:
+    :path: "../node_modules/react-native-fbsdk"
   react-native-netinfo:
     :path: "../node_modules/@react-native-community/netinfo"
   react-native-safe-area-context:
@@ -635,6 +706,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-firebase/app"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
+  RNGoogleSignin:
+    :path: "../node_modules/@react-native-community/google-signin"
   RNLocalize:
     :path: "../node_modules/react-native-localize"
   RNNotifee:
@@ -655,6 +728,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
@@ -662,6 +736,9 @@ SPEC CHECKSUMS:
   DoubleConversion: cde416483dac037923206447da6e1454df403714
   FBLazyVector: 3ef4a7f62e7db01092f9d517d2ebc0d0677c4a37
   FBReactNativeSpec: dc7fa9088f0f2a998503a352b0554d69a4391c5a
+  FBSDKCoreKit: e7dcac0aabcfb09d0166998edd95fe3b05a0ce5d
+  FBSDKLoginKit: 1b0cf04df0370b37404213157b060d6666ede814
+  FBSDKShareKit: abc29e1bb4f9f59f679adf1ae191006d68455f96
   Firebase: ed042590caa0029392257529a8003c25ee82bc18
   FirebaseCore: 687b8e6a0a4337b898a6326d68254c2f80c143af
   FirebaseCoreDiagnostics: 7535fe695737f8c5b350584292a70b7f8ff0357b
@@ -675,7 +752,10 @@ SPEC CHECKSUMS:
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
   GoogleDataTransport: 8a40cb194ad242b6f6dfe72c14fe40fc67c4dcd7
+  GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: e121a3867449ce16b0e35ddf1797ea7a389ffdf2
+  GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
+  GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   lottie-react-native: 1fb4ce21d6ad37dab8343eaff8719df76035bd93
@@ -697,6 +777,7 @@ SPEC CHECKSUMS:
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   RCTRequired: f13f25e7b12f925f1f6a6a8c69d929a03c0129fe
   RCTTypeSafety: 44982c5c8e43ff4141eb519a8ddc88059acd1f3a
+  RCTYouTube: 4509d59a7de050dd0c7c6cb1f427d37678d63b5c
   React: e1c65dd41cb9db13b99f24608e47dd595f28ca9a
   React-callinvoker: 552a6a6bc8b3bb794cf108ad59e5a9e2e3b4fc98
   React-Core: 9d341e725dc9cd2f49e4c49ad1fc4e8776aa2639
@@ -706,6 +787,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 8ca588cc921e70590820ce72b8789b02c67cce38
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
   react-native-appearance: 0f0e5fc2fcef70e03d48c8fe6b00b9158c2ba8aa
+  react-native-fbsdk: c35d42169e64aaf66f01713c1e18d0674f7f6519
   react-native-netinfo: 841c2a83fe7df998fed56fd48b73229f17a5aa5b
   react-native-safe-area-context: e200d4433aba6b7e60b52da5f37af11f7a0b0392
   react-native-webview: cf5527893252b3b036eea024a1da6996f7344c74
@@ -726,8 +808,9 @@ SPEC CHECKSUMS:
   RNCPushNotificationIOS: dc1c0c6aa18a128df123598149f42e848d26a4ac
   RNDeviceInfo: a576aac2f2927eb7e0058a27dad811c8e7cd1474
   RNFastImage: e19ba191922e7dab9d932a4d59d62d76660aa222
-  RNFBApp: d55b3a69d199cff25ecf4f3bf41a86c47aa37d57
+  RNFBApp: abbab9c96e6d2f1cada6401c9138d3f8cb2ae930
   RNGestureHandler: b6b359bb800ae399a9c8b27032bdbf7c18f08a08
+  RNGoogleSignin: ccf71ee4b6cfd324fd788a41e457e2043838c0d9
   RNLocalize: 49634a6a605dcdeb319e9c42a5c2f1aec508694b
   RNNotifee: ccfcb4a3055f1593d8a02378ac527a907e807d04
   RNPermissions: ad71dd4f767ec254f2cd57592fbee02afee75467
@@ -740,7 +823,8 @@ SPEC CHECKSUMS:
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   Yoga: 7740b94929bbacbddda59bf115b5317e9a161598
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
+  YoutubePlayer-in-WKWebView: af2f5929fc78882d94bfdfeea999b661b78d9717
 
-PODFILE CHECKSUM: 7da130c2b2ff3e51c8fbead42781fd5243045053
+PODFILE CHECKSUM: 7633116c8369fe4041b2d13ad214e6fd1aca2d10
 
 COCOAPODS: 1.9.3

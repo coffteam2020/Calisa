@@ -12,10 +12,17 @@ export class UserStore {
   @observable userKey = undefined;
   @observable userId = undefined;
   @observable userRegisterBeing = {};
-  @observable categories = [];
+  @observable categories = {};
+  @observable cart = [];
 
   @action.bound
   setCategories = (categories) => {
     this.categories = categories;
-  }
+  };
+
+  @action.bound
+  addProductToCart = (item) => {
+    this.cart = [...this.cart, item];
+    console.log(JSON.stringify(this.cart));
+  };
 }

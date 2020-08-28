@@ -20,8 +20,49 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1468797919986039</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>gg</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.104709577356-h4idg7blk2pgm13h9ubc5epq52nqcg3f</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FacebookAppID</key>
+	<string>1468797919986039</string>
+	<key>FacebookDisplayName</key>
+	<string>Calisa Retail</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fbapi20130214</string>
+		<string>fbapi20130410</string>
+		<string>fbapi20130702</string>
+		<string>fbapi20131010</string>
+		<string>fbapi20131219</string>
+		<string>fbapi20140410</string>
+		<string>fbapi20140116</string>
+		<string>fbapi20150313</string>
+		<string>fbapi20150629</string>
+		<string>fbapi20160328</string>
+		<string>fbauth</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -37,8 +78,30 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Our app need to clarify</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Our app need to clarify</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Our app need to clarify</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Our app need to clarify</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Our app need to clarify</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Our app need to clarify</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Our app need to clarify</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>Our app need to clarify</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Our app need to clarify</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Our app need to clarify</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Our app need to clarify</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Our app need to clarify</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Nunito-Black.ttf</string>

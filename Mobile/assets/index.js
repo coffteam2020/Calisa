@@ -18,4 +18,8 @@ export const images = {
   vector: require('./imgs/vector.png'),
   flash: require('./imgs/flash.png'),
   header: require('./imgs/header.png'),
+  no: require('./imgs/no.png'),
+  notify: require('./imgs/noti.png'),
+  fb: require('./imgs/facebook-square.png'),
+  gg: require('./imgs/google-plus-square.png'),
 };

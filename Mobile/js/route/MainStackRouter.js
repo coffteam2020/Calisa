@@ -8,6 +8,8 @@ import HomeScreen from '../containers/HomeScreen/index';
 import ProfileScreen from '../containers/ProfileScreen/index';
 import CartScreen from '../containers/CartScreen/index';
 import ProductListByCategoryScreen from '../containers/ProductListByCategoryScreen/index';
+import Detail from '../containers/ProductListByCategoryScreen/Detail';
+import Cart from '../containers/ProductListByCategoryScreen/Cart';
 import NotificationScreen from '../containers/NotificationScreen/index';
 import FavouriteScreen from '../containers/FavouriteScreen/index';
 import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
@@ -53,7 +55,7 @@ const Tabs = createBottomTabNavigator(
       },
     },
     CartScreen: {
-      screen: CartScreen,
+      screen: Cart,
       navigationOptions: {
         title: 'CartScreen',
         tabBarIcon: ({tintColor, focused}) => (
@@ -117,6 +119,9 @@ const AuthedStack = createStackNavigator(
   {
     HomeScreen: {screen: Tabs},
     ProductListByCategoryScreen: {screen: ProductListByCategoryScreen},
+    Detail: {screen: Detail},
+    Cart: {screen: Cart},
+    LoginScreen: {screen: LoginScreen}
   },
   {
     initialRouteName: 'HomeScreen',

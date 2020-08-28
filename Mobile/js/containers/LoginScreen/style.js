@@ -9,13 +9,10 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   content: {
-    justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
     width: ScreenWidth,
-    height: ScreenHeight / 2,
-    marginTop: ScreenHeight / 6,
-    marginBottom: ScreenHeight / 8,
+    height: ScreenHeight,
   },
   img: {
     justifyContent: 'center',

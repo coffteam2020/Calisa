@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {
@@ -11,17 +12,24 @@ import {
 import {withTheme, Searchbar} from 'react-native-paper';
 import {containerStyle} from '../../themes/styles';
 import HeaderImg from '../../shared/components/HeaderImg';
+import HTML from 'react-native-render-html';
 import Swiper from 'react-native-swiper';
 import {ScreenWidth, ScreenHeight} from '../../shared/utils/dimension/Divices';
 import FastImage from 'react-native-fast-image';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import {
+  ScrollView,
+  TouchableOpacity,
+  FlatList,
+} from 'react-native-gesture-handler';
 import {images} from '../../../assets';
 import TextNormal from '../../shared/components/Text/TextNormal';
 import {colors} from '../../shared/utils/colors/colors';
 import {NavigationService} from '../../navigation';
 import {useStores} from '../../store/useStore';
 import {useObserver} from 'mobx-react';
+import {ScreenNames} from '../../route/ScreenNames';
+import YouTube from 'react-native-youtube';
 const MOCK_BANNER = [
   {
     index: 0,
@@ -46,6 +54,9 @@ const ProductListByCategoryScreen = (props) => {
   //   Services
   // }
   const swipe = () => {
+    const news = props.navigation.state.params.news || [];
+    console.log(JSON.stringify(news));
+    const banner = props.navigation.state.params.banner || [];
     return (
       <Swiper
         autoplay
@@ -55,32 +66,30 @@ const ProductListByCategoryScreen = (props) => {
         scrollEnabled
         loop
         style={styles.swipe}>
-        <View style={styles.slide1}>
-          <FastImage
-            source={{uri: MOCK_BANNER[0].imgUrl}}
-            style={styles.slide1}
-            resizeMode="cover"
-          />
-        </View>
-        <View style={styles.slide1}>
-          <FastImage
-            resizeMode="cover"
-            source={{uri: MOCK_BANNER[1].imgUrl}}
-            style={styles.slide1}
-          />
-        </View>
-        <View style={styles.slide1}>
-          <FastImage
-            resizeMode="cover"
-            source={{uri: MOCK_BANNER[2].imgUrl}}
-            style={styles.slide1}
-          />
-        </View>
+        {banner.map((item) => {
+          return (
+            <View style={styles.slide1}>
+              <FastImage
+                source={{
+                  uri: `http://calisa.ispa.io/img${item?.thumbs[0]?.path}`,
+                }}
+                style={styles.slide1}
+                resizeMode="cover"
+              />
+            </View>
+          );
+        })}
       </Swiper>
     );
   };
   const renderProducts = () => {
-    let categories = userStore?.categories.slice() || [];
+    let key = props?.navigation.state.params?.key;
+    let categories =
+      key === 'listHotPrice'
+        ? userStore?.categories?.listCateHotWeek.slice() || []
+        : key === 'listHotSell'
+        ? userStore?.categories?.listCateHotSale.slice() || []
+        : null;
     return (
       <ScrollView style={{flexDirection: 'row'}} horizontal>
         {(categories || []).map((item) => {
@@ -92,8 +101,8 @@ const ProductListByCategoryScreen = (props) => {
                   {
                     marginEnd: 10,
                     padding: 10,
-                    width: ScreenWidth / 5,
-                    height: ScreenWidth / 5,
+                    width: ScreenWidth / 4,
+                    // height: ScreenWidth / 4,
                     borderRadius: 20,
                     borderColor: 'white',
                     borderWidth: 1,
@@ -106,8 +115,8 @@ const ProductListByCategoryScreen = (props) => {
                   source={images.backgroundBtnProduct}
                   style={[
                     {
-                      width: ScreenWidth / 5,
-                      height: ScreenWidth / 5,
+                      width: ScreenWidth / 4,
+                      height: ScreenWidth / 4,
                       justifyContent: 'center',
                       alignItems: 'center',
                     },
@@ -115,16 +124,25 @@ const ProductListByCategoryScreen = (props) => {
                   <Image
                     resizeMethod="resize"
                     resizeMode="cover"
-                    source={{uri: item?.image?.url}}
+                    source={{
+                      uri:
+                        item?.image?.url ||
+                        'https://covid19.lacounty.gov/wp-content/uploads/GettyImages-1128687123-1024x683.jpg',
+                    }}
                     style={[
                       {
-                        width: ScreenWidth / 5,
-                        height: ScreenWidth / 5,
+                        width: ScreenWidth / 4,
+                        height: ScreenWidth / 4,
                         borderRadius: 20,
                       },
                     ]}
                   />
                 </ImageBackground>
+                <TextNormal
+                  numberOfLines={3}
+                  text={`${item?.categoryName}`}
+                  style={{color: 'black', textAlign: 'center'}}
+                />
               </TouchableOpacity>
               <TextNormal
                 props={props}
@@ -141,6 +159,214 @@ const ProductListByCategoryScreen = (props) => {
           );
         })}
       </ScrollView>
+    );
+  };
+  const renderProduct = () => {
+    let key = props?.navigation.state.params?.key;
+    var data =
+      key === 'listHotPrice'
+        ? userStore?.categories?.listHotWeek.slice() || []
+        : key === 'listHotSell'
+        ? userStore?.categories?.listHotSale.slice() || []
+        : userStore?.categories?.listMenus.slice() || [];
+    return (
+      <FlatList
+        numColumns={3}
+        data={data}
+        renderItem={(item, index) => {
+          console.log(JSON.stringify(item));
+          let sale = `${Math.floor(
+            ((item?.item?.priceSizes?.[0]?.salePrice || 0) * 100) /
+              item?.item?.priceSizes?.[0]?.price,
+          )}`;
+          return (
+            <TouchableOpacity
+              onPress={() =>
+                NavigationService.navigate(ScreenNames.Detail, {data: item})
+              }
+              style={{
+                justifyContent: 'center',
+                alignItems: 'center',
+                paddingEnd: 5,
+                marginBottom: 10,
+                marginEnd: 5,
+                borderColor: colors.gray_less,
+                borderRadius: 10,
+                borderWidth: 1,
+                // flexDirection: 'column',
+              }}>
+              <View>
+                <FastImage
+                  source={{
+                    uri: item?.item?.image?.url,
+                  }}
+                  cache={FastImage.cacheControl.cacheOnly}
+                  style={{
+                    width: ScreenWidth * 0.28,
+                    height: ScreenWidth * 0.28,
+                  }}
+                />
+                <TextNormal
+                  text={`${item?.item?.name}`}
+                  numberOfLines={3}
+                  style={{
+                    color: 'black',
+                    fontSize: 13,
+                    width: ScreenWidth * 0.28,
+                  }}
+                />
+                {item?.item?.priceSizes?.[0]?.sizeName && (
+                  <TextNormal
+                    text={`${item?.item?.priceSizes?.[0]?.sizeName}`}
+                    numberOfLines={3}
+                    style={{
+                      color: 'black',
+                      fontSize: 13,
+                      width: ScreenWidth * 0.28,
+                    }}
+                  />
+                )}
+                <TextNormal
+                  text={`${
+                    item?.item?.price || item?.item?.priceSizes?.[0]?.price
+                  }d`}
+                  numberOfLines={3}
+                  style={{
+                    fontWeight: 'bold',
+                    color: 'red',
+                    fontSize: 15,
+                    width: ScreenWidth * 0.28,
+                  }}
+                />
+                {item?.item?.isSale && (
+                  <TextNormal
+                    text={`${
+                      item?.item?.price ||
+                      item?.item?.priceSizes?.[0]?.salePrice
+                    }d`}
+                    numberOfLines={3}
+                    style={{
+                      color: 'black',
+                      fontSize: 13,
+                      width: ScreenWidth * 0.28,
+                      textDecorationLine: 'line-through',
+                    }}
+                  />
+                )}
+                {100 - sale > 0 && (
+                  <View
+                    style={{
+                      height: 30,
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      position: 'absolute',
+                      top: 5,
+                      right: 5,
+                      width: 35,
+                      borderBottomLeftRadius: 20,
+                      borderBottomRightRadius: 20,
+                      backgroundColor: 'red',
+                    }}>
+                    <TextNormal
+                      text={`${100 - sale}%`}
+                      style={{color: 'white', fontSize: 11}}
+                    />
+                  </View>
+                )}
+              </View>
+            </TouchableOpacity>
+          );
+        }}
+      />
+    );
+  };
+  const renderNews = () => {
+    let data = props?.navigation.state.params?.news?.news;
+    return (
+      <FlatList
+        numColumns={1}
+        data={data}
+        renderItem={(item, index) => {
+          let id =
+            (item?.item?.video_url || 'watch?v=a')?.split('watch?v=')[1] || '';
+          return (
+            <TouchableOpacity
+              style={{
+                // justifyContent: 'center',
+                // alignItems: 'center',
+                // paddingEnd: 5,
+                marginBottom: 10,
+                marginEnd: 5,
+                borderColor: colors.gray_less,
+                borderRadius: 10,
+                borderWidth: 1,
+                // flexDirection: 'column',
+              }}>
+              <View>
+                <YouTube
+                  apiKey={'AIzaSyD-VuAxJLCUUmh0rAtiZytV2iI_t2sOh50'}
+                  videoId={id || ''} // The YouTube video ID
+                  play={false} // control playback of video with true/false
+                  fullscreen={false} // control whether the video should play in fullscreen or inline
+                  loop={false} // control whether the video should loop when ended
+                  onReady={() => {}}
+                  resumePlayAndroid={false}
+                  onChangeState={() => {}}
+                  onChangeQuality={() => {}}
+                  onError={() => {}}
+                  style={[styles.video]}
+                  resumePlayAndroid={false}
+                />
+                <TextNormal
+                  text={`${item?.item?.seo_title}`}
+                  numberOfLines={3}
+                  style={{
+                    color: 'black',
+                    fontSize: 17,
+                    fontWeight: 'bold',
+                    width: ScreenWidth,
+                  }}
+                />
+                <TextNormal
+                  text={`${item?.item?.seo_text}`}
+                  numberOfLines={1000}
+                  style={{
+                    color: 'black',
+                    fontSize: 13,
+                    width: ScreenWidth,
+                  }}
+                />
+                {/* <TextNormal
+                  text={`${item?.item?.descriptions}`}
+                  numberOfLines={3000}
+                  style={{
+                    fontWeight: 'bold',
+                    color: 'red',
+                    fontSize: 15,
+                    width: ScreenWidth,
+                  }}
+                /> */}
+                <HTML
+                  html={`${item?.item?.descriptions}`}
+                  imagesMaxWidth={ScreenWidth}
+                />
+                {item?.item?.isSale && (
+                  <TextNormal
+                    text={`${item?.item?.priceSizes?.[0]?.salePrice}d`}
+                    numberOfLines={3}
+                    style={{
+                      color: 'black',
+                      fontSize: 13,
+                      width: ScreenWidth * 0.28,
+                      textDecorationLine: 'line-through',
+                    }}
+                  />
+                )}
+              </View>
+            </TouchableOpacity>
+          );
+        }}
+      />
     );
   };
   return useObserver(() => (
@@ -174,18 +400,39 @@ const ProductListByCategoryScreen = (props) => {
             </TouchableOpacity>
             <TextNormal
               style={{color: colors.whiteBackground}}
-              text="> Sản phẩm đi chợ mỗi ngày"
+              text={` > ${props?.navigation.state.params.title || ''}`}
             />
           </View>
         </ImageBackground>
         <View style={styles.container}>
-          {swipe()}
+          {!props.navigation.state.params.news && swipe()}
           <View style={{padding: 20}}>
-            <TextNormal
-              text="Mua sắm theo danh mục"
-              style={[{color: 'black'}, containerStyle.textHeaderSmall]}
-            />
+            {!props.navigation.state.params.news && (
+              <TextNormal
+                text="Mua sắm theo danh mục"
+                style={[{color: 'black'}, containerStyle.textHeaderSmall]}
+              />
+            )}
             {renderProducts()}
+            <View
+              style={{
+                height: 10,
+                backgroundColor: colors.gray,
+                width: ScreenWidth,
+                marginLeft: -20,
+                marginBottom: 10,
+              }}
+            />
+            {!props.navigation.state.params.news && (
+              <TextNormal
+                clickable
+                text="Sắp xếp: Tất cả ⌄"
+                style={{marginBottom: 10}}
+              />
+            )}
+            {!props?.navigation.state.params?.news
+              ? renderProduct()
+              : renderNews()}
           </View>
         </View>
       </ScrollView>
@@ -218,6 +465,14 @@ const styles = StyleSheet.create({
   swipe2: {
     alignItems: 'center',
     marginTop: 55,
+  },
+  video: {
+    alignSelf: 'stretch',
+    height: ScreenWidth * 0.5,
+    width: ScreenWidth * 1,
+    margin: 0,
+    // marginEnd: 20,
+    borderRadius: 5,
   },
   container: {
     // paddingTop: ScreenHeight / 2,

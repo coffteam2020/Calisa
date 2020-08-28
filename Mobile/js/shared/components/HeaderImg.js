@@ -49,7 +49,7 @@ const HeaderImg = ({hasBack, title, rightIco}) => {
             )}
           </TouchableOpacity>
           <View
-            style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
             <TextNormal
               text={`${title || ''}`}
               style={[

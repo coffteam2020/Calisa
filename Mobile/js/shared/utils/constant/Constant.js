@@ -111,7 +111,7 @@ export default {
     CYPER: 'DOCTIFYYYY',
   },
   WEB_CLIENT_ID:
-    '1009498688082-n5gsvugfto799qt8j222291ochbqfaml.apps.googleusercontent.com',
+    '104709577356-h4idg7blk2pgm13h9ubc5epq52nqcg3f.apps.googleusercontent.com',
   LOCATION_BACKGROUND_BTN: [0, 0.36, 1],
   COLOR_BACKGROUND_BTN: ['#665AAA', '#665AAA'],
   PROGRESS: ['#15B7B0', '#34EE99'],

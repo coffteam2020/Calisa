@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {StatusBar, View, TouchableOpacity} from 'react-native';
 import {withTheme} from 'react-native-paper';
 import {containerStyle} from '../../themes/styles';
@@ -16,10 +16,23 @@ import {ScrollView} from 'react-native-gesture-handler';
 import {ScreenHeight, ScreenWidth} from '../../shared/utils/dimension/Divices';
 import FastImage from 'react-native-fast-image';
 import {colors} from '../../shared/utils/colors/colors';
+import {NavigationService} from '../../navigation';
+import {ScreenNames} from '../../route/ScreenNames';
+import IALocalStorage from '../../shared/utils/storage/IALocalStorage';
 
 const ProfileScreen = (props) => {
   const {colorsApp} = props.theme;
-
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    props?.navigation.addListener('willFocus', () => {
+      getUserInfo();
+    });
+  }, []);
+  const getUserInfo = async () => {
+    let user = await IALocalStorage.getDetailUserInfo();
+    console.log(JSON.stringify(user));
+    setUser(user);
+  };
   const renderAvatar = (isDisable) => {
     return (
       <TouchableOpacity style={{flexDirection: 'row', padding: 20}}>
@@ -42,19 +55,39 @@ const ProfileScreen = (props) => {
             alignItems: 'center',
           }}>
           <View>
-            <TextNormal text="Chào mừng bạn đến với Calisa" />
-            <View style={{flexDirection: 'row'}}>
-              <TextNormal
-                text="Đăng nhập"
-                clickable
-                style={{color: colors.blue, marginEnd: 20, padding: 5}}
-              />
-              <TextNormal
-                text="Đăng ký"
-                clickable
-                style={{color: colors.blue, padding: 5}}
-              />
-            </View>
+          {!user && <TextNormal text="Chào mừng bạn đến với Calisa" />}
+            {!user ? (
+              <View style={{flexDirection: 'row'}}>
+                <TextNormal
+                  text="Đăng nhập"
+                  clickable
+                  onPress={() =>
+                    NavigationService.navigate(ScreenNames.LoginScreen)
+                  }
+                  style={{color: colors.blue, marginEnd: 20, padding: 5}}
+                />
+                <TextNormal
+                  text="Đăng ký"
+                  clickable
+                  style={{color: colors.blue, padding: 5}}
+                />
+              </View>
+            ) : (
+              <View>
+                <TextNormal
+                  text={user?.firstName || ''}
+                  style={{color: colors.blue, marginEnd: 20, padding: 0}}
+                />
+                <TextNormal
+                  text={user?.email || ''}
+                  style={{color: colors.blue, padding: 0}}
+                />
+                <TextNormal
+                  text={user?.phone || ''}
+                  style={{color: colors.blue, padding: 0}}
+                />
+              </View>
+            )}
           </View>
           <EvilIcons
             name="chevron-right"
@@ -75,7 +108,7 @@ const ProfileScreen = (props) => {
           height: 64,
           paddingEnd: 20,
           paddingLeft: 20,
-          opacity: disable ? 0.6 : 1,
+          opacity: disable ? 0.2 : 1,
           marginBottom: bottom ? bottom : 5,
           backgroundColor: 'white',
         }}>

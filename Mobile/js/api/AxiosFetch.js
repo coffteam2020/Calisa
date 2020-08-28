@@ -12,7 +12,7 @@ import {Alert} from 'react-native';
 import {NavigationService} from '../navigation';
 import {ScreenNames} from '../route/ScreenNames';
 
-export const APP_URL = 'http://calisa.techer.vn/api/';
+export const APP_URL = 'http://whiteshark.techer.vn/api/';
 
 const AxiosInstance = Axios.create({
   timeout: 200000,

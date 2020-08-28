@@ -43,7 +43,7 @@ function setParams(params, key) {
 function popToTop() {
 	const resetAction = StackActions.reset({
 		index: 0,
-		actions: [NavigationActions.navigate({ routeName: RouteKeys.HomeNavigator })],
+		actions: [NavigationActions.navigate({ routeName: 'HomeScreen' })],
 	});
 	_navigator && _navigator.dispatch(resetAction);
 }
