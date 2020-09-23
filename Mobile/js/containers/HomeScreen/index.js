@@ -27,6 +27,7 @@ import {colors} from '../../shared/utils/colors/colors';
 import {NavigationService} from '../../navigation';
 import {ScreenNames} from '../../route/ScreenNames';
 import Axios from 'axios';
+import { useObserver } from 'mobx-react';
 const MOCK_BANNER = [
   {
     index: 0,
@@ -601,7 +602,7 @@ const HomeScreen = (props) => {
     );
   };
 
-  return (
+  return useObserver(() => (
     <View style={[containerStyle.defaultBackground]}>
       <StatusBar barStyle={colorsApp.statusBar} />
 
@@ -620,7 +621,7 @@ const HomeScreen = (props) => {
         </View>
       </ScrollView>
     </View>
-  );
+  ));
 };
 
 export default withTheme(HomeScreen);

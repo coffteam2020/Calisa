@@ -27,6 +27,10 @@ target 'Mobile' do
   pod 'FBSDKLoginKit', '~> 5.8.0'
   pod 'FBSDKShareKit', '~> 5.8.0'
   pod 'GoogleSignIn', '~> 5.0.0'
+  pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk'
+
+  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+
   target 'MobileTests' do
     inherit! :complete
     # Pods for testing

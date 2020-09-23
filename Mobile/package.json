@@ -47,7 +47,6 @@
     "react-native-fbsdk": "1.1.2",
     "react-native-file-picker": "^0.0.19",
     "react-native-gesture-handler": "^1.6.1",
-    "react-native-google-signin": "^2.1.1",
     "react-native-image-pan-zoom": "^2.1.11",
     "react-native-indicators": "^0.13.0",
     "react-native-keyboard-aware-scroll-view": "^0.9.2",

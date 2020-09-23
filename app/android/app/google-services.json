@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "104709577356",
+    "firebase_url": "https://calisaretail.firebaseio.com",
+    "project_id": "calisaretail",
+    "storage_bucket": "calisaretail.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104709577356:android:5ca70b5062cb37ebcd39a9",
+        "android_client_info": {
+          "package_name": "com.da"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104709577356-r74lkglioskctr6715gjvrv5ijnvor7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6k7iiDHutAvLAHHYuXZEDILIT5tYuTDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104709577356-r74lkglioskctr6715gjvrv5ijnvor7f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "104709577356-h4idg7blk2pgm13h9ubc5epq52nqcg3f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.calisa.retail"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104709577356:android:a4e375cb10e6b869cd39a9",
+        "android_client_info": {
+          "package_name": "vn.calisa.retail"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104709577356-cinbr6vcjeb5ttpsb1fe0fnclofrm7hb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.calisa.retail",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "104709577356-r74lkglioskctr6715gjvrv5ijnvor7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6k7iiDHutAvLAHHYuXZEDILIT5tYuTDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104709577356-r74lkglioskctr6715gjvrv5ijnvor7f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "104709577356-h4idg7blk2pgm13h9ubc5epq52nqcg3f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.calisa.retail"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
