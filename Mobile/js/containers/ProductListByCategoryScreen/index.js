@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   StatusBar,
   View,
@@ -9,12 +9,12 @@ import {
   ImageBackground,
   Image,
 } from 'react-native';
-import {withTheme, Searchbar} from 'react-native-paper';
-import {containerStyle} from '../../themes/styles';
+import { withTheme, Searchbar } from 'react-native-paper';
+import { containerStyle } from '../../themes/styles';
 import HeaderImg from '../../shared/components/HeaderImg';
 import HTML from 'react-native-render-html';
 import Swiper from 'react-native-swiper';
-import {ScreenWidth, ScreenHeight} from '../../shared/utils/dimension/Divices';
+import { ScreenWidth, ScreenHeight } from '../../shared/utils/dimension/Divices';
 import FastImage from 'react-native-fast-image';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {
@@ -22,14 +22,15 @@ import {
   TouchableOpacity,
   FlatList,
 } from 'react-native-gesture-handler';
-import {images} from '../../../assets';
+import { images } from '../../../assets';
 import TextNormal from '../../shared/components/Text/TextNormal';
-import {colors} from '../../shared/utils/colors/colors';
-import {NavigationService} from '../../navigation';
-import {useStores} from '../../store/useStore';
-import {useObserver} from 'mobx-react';
-import {ScreenNames} from '../../route/ScreenNames';
+import { colors } from '../../shared/utils/colors/colors';
+import { NavigationService } from '../../navigation';
+import { useStores } from '../../store/useStore';
+import { useObserver } from 'mobx-react';
+import { ScreenNames } from '../../route/ScreenNames';
 import YouTube from 'react-native-youtube';
+import { ToastHelper } from '../../shared/components/ToastHelper';
 const MOCK_BANNER = [
   {
     index: 0,
@@ -47,9 +48,9 @@ const MOCK_BANNER = [
   },
 ];
 const ProductListByCategoryScreen = (props) => {
-  const {colorsApp} = props.theme;
+  const { colorsApp } = props.theme;
   const [product, setProduct] = useState([]);
-  const {userStore} = useStores();
+  const { userStore } = useStores();
   // const getProducts = async () => {
   //   Services
   // }
@@ -71,7 +72,7 @@ const ProductListByCategoryScreen = (props) => {
             <View style={styles.slide1}>
               <FastImage
                 source={{
-                  uri: `http://calisa.ispa.io/img${item?.thumbs[0]?.path}`,
+                  uri: `http://dev.calisa.vn/img${item?.thumbs[0]?.path}`,
                 }}
                 style={styles.slide1}
                 resizeMode="cover"
@@ -88,10 +89,10 @@ const ProductListByCategoryScreen = (props) => {
       key === 'listHotPrice'
         ? userStore?.categories?.listCateHotWeek.slice() || []
         : key === 'listHotSell'
-        ? userStore?.categories?.listCateHotSale.slice() || []
-        : null;
+          ? userStore?.categories?.listCateHotSale.slice() || []
+          : null;
     return (
-      <ScrollView style={{flexDirection: 'row'}} horizontal>
+      <ScrollView style={{ flexDirection: 'row' }} horizontal>
         {(categories || []).map((item) => {
           return (
             <View>
@@ -141,7 +142,7 @@ const ProductListByCategoryScreen = (props) => {
                 <TextNormal
                   numberOfLines={3}
                   text={`${item?.categoryName}`}
-                  style={{color: 'black', textAlign: 'center'}}
+                  style={{ color: 'black', textAlign: 'center' }}
                 />
               </TouchableOpacity>
               <TextNormal
@@ -167,8 +168,8 @@ const ProductListByCategoryScreen = (props) => {
       key === 'listHotPrice'
         ? userStore?.categories?.listHotWeek.slice() || []
         : key === 'listHotSell'
-        ? userStore?.categories?.listHotSale.slice() || []
-        : userStore?.categories?.listMenus.slice() || [];
+          ? userStore?.categories?.listHotSale.slice() || []
+          : userStore?.categories?.listMenus.slice() || [];
     return (
       <FlatList
         numColumns={3}
@@ -177,12 +178,12 @@ const ProductListByCategoryScreen = (props) => {
           console.log(JSON.stringify(item));
           let sale = `${Math.floor(
             ((item?.item?.priceSizes?.[0]?.salePrice || 0) * 100) /
-              item?.item?.priceSizes?.[0]?.price,
+            item?.item?.priceSizes?.[0]?.price,
           )}`;
           return (
             <TouchableOpacity
               onPress={() =>
-                NavigationService.navigate(ScreenNames.Detail, {data: item})
+                NavigationService.navigate(ScreenNames.Detail, { data: item })
               }
               style={{
                 justifyContent: 'center',
@@ -227,9 +228,8 @@ const ProductListByCategoryScreen = (props) => {
                   />
                 )}
                 <TextNormal
-                  text={`${
-                    item?.item?.price || item?.item?.priceSizes?.[0]?.price
-                  }d`}
+                  text={`${item?.item?.price || item?.item?.priceSizes?.[0]?.price
+                    }d`}
                   numberOfLines={3}
                   style={{
                     fontWeight: 'bold',
@@ -240,10 +240,9 @@ const ProductListByCategoryScreen = (props) => {
                 />
                 {item?.item?.isSale && (
                   <TextNormal
-                    text={`${
-                      item?.item?.price ||
+                    text={`${item?.item?.price ||
                       item?.item?.priceSizes?.[0]?.salePrice
-                    }d`}
+                      }d`}
                     numberOfLines={3}
                     style={{
                       color: 'black',
@@ -269,7 +268,7 @@ const ProductListByCategoryScreen = (props) => {
                     }}>
                     <TextNormal
                       text={`${100 - sale}%`}
-                      style={{color: 'white', fontSize: 11}}
+                      style={{ color: 'white', fontSize: 11 }}
                     />
                   </View>
                 )}
@@ -309,11 +308,11 @@ const ProductListByCategoryScreen = (props) => {
                   play={false} // control playback of video with true/false
                   fullscreen={false} // control whether the video should play in fullscreen or inline
                   loop={false} // control whether the video should loop when ended
-                  onReady={() => {}}
+                  onReady={() => { }}
                   resumePlayAndroid={false}
-                  onChangeState={() => {}}
-                  onChangeQuality={() => {}}
-                  onError={() => {}}
+                  onChangeState={() => { }}
+                  onChangeQuality={() => { }}
+                  onError={() => { }}
                   style={[styles.video]}
                   resumePlayAndroid={false}
                 />
@@ -385,7 +384,11 @@ const ProductListByCategoryScreen = (props) => {
           ]}
           resizeMethod="resize"
           resizeMode="cover">
-          <Searchbar style={styles.search} placeholder="Search" />
+          <Searchbar style={styles.search} placeholder="Search" onSubmitEditing={() => {
+            setTimeout(() => {
+              ToastHelper.showError('Không tìm thấy dữ liệu bạn cần tìm')
+            }, 1000)
+          }} />
           <View
             style={{
               flexDirection: 'row',
@@ -399,18 +402,18 @@ const ProductListByCategoryScreen = (props) => {
               <Ionicons name="home" size={25} color={colors.whiteBackground} />
             </TouchableOpacity>
             <TextNormal
-              style={{color: colors.whiteBackground}}
+              style={{ color: colors.whiteBackground }}
               text={` > ${props?.navigation.state.params.title || ''}`}
             />
           </View>
         </ImageBackground>
         <View style={styles.container}>
           {!props.navigation.state.params.news && swipe()}
-          <View style={{padding: 20}}>
+          <View style={{ padding: 20 }}>
             {!props.navigation.state.params.news && (
               <TextNormal
                 text="Mua sắm theo danh mục"
-                style={[{color: 'black'}, containerStyle.textHeaderSmall]}
+                style={[{ color: 'black' }, containerStyle.textHeaderSmall]}
               />
             )}
             {renderProducts()}
@@ -427,7 +430,7 @@ const ProductListByCategoryScreen = (props) => {
               <TextNormal
                 clickable
                 text="Sắp xếp: Tất cả ⌄"
-                style={{marginBottom: 10}}
+                style={{ marginBottom: 10 }}
               />
             )}
             {!props?.navigation.state.params?.news
@@ -481,8 +484,8 @@ const styles = StyleSheet.create({
   },
   search: {
     width: '90%',
-    height: 35,
-    marginTop: 15,
+    height: 50,
+    // marginTop: 15,
     alignSelf: 'center',
     alignItems: 'center',
   },

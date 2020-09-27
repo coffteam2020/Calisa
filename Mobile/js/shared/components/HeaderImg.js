@@ -28,7 +28,7 @@ const HeaderImg = ({hasBack, title, rightIco}) => {
             flexDirection: 'row',
             justifyContent: 'space-between',
             width: '100%',
-            marginTop: 40,
+            marginTop: 20,
           }}>
           <TouchableOpacity
             onPress={() => {
@@ -77,7 +77,7 @@ export default HeaderImg;
 const styles = StyleSheet.create({
   content: {
     width: '100%',
-    height: ScreenHeight / 7,
+    height: ScreenHeight / 10,
     // position: 'absolute',
     top: 0,
     left: 0,

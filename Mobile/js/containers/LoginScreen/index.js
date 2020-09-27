@@ -81,14 +81,14 @@ const LoginScreen = (props) => {
       }
     });
   };
-  const onLoginSocial = async (mail, pass) => {
+  const onLoginSocial = async (token, provider) => {
     AxiosFetcher({
       method: 'POST',
       data: {
-        email: mail ? mail : userName,
-        password: pass ? pass : password,
+        accessToken: token,
+        provider: provider,
       },
-      url: 'auth/sign-in',
+      url: 'auth/sign-in/social',
       hasToken: false,
     }).then(async (a) => {
       if (a?.content) {
@@ -195,12 +195,13 @@ const LoginScreen = (props) => {
             if (email) {
               // setEmail(email);
               // onFireBaseCheckEmail(user?.accessToken || '', email);
+              onLoginSocial(user?.accessToken, 'facebook');
             } else {
               if (result?.id) {
                 // setEmail(result?.id);
                 // onFireBaseCheckEmail(user?.accessToken || '', '', result?.id);
               } else {
-                // ToastHelper.showError(t('error.emailNotExist'));
+                ToastHelper.showError('Đăng nhập facebook không thành công');
               }
             }
           }
@@ -230,24 +231,26 @@ const LoginScreen = (props) => {
         const userInfo = await GoogleSignin.signIn();
         console.log(JSON.stringify(userInfo));
         if (userInfo) {
-          onLogin(userInfo?.user?.email, '');
+          // onLogin(userInfo?.user?.email, '');
+          onLoginSocial(userInfo?.idToken, 'google');
           // setEmail(userInfo.user.email);
           // onFireBaseCheckEmail(userInfo.idToken, userInfo.user.email);
         } else {
-          // ToastHelper.showError(t('socialAuthen.google.other'));
+          ToastHelper.showError('Đăng nhập lỗi, vui lòng thử lại');
         }
       } else {
-        // ToastHelper.showError(t('socialAuthen.google.notSupport'));
+        ToastHelper.showError('Đăng nhập lỗi, vui lòng thử lại');
       }
     } catch (error) {
+      console.log(error?.code);
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
-        // ToastHelper.showError(t('socialAuthen.google.cancel'));
+        ToastHelper.showError('Canceled');
       } else if (error.code === statusCodes.IN_PROGRESS) {
-        // ToastHelper.showWarning(t('socialAuthen.google.inProgress'));
+        ToastHelper.showError('Đang lấy mã token lần đăng nhập trước');
       } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
-        // ToastHelper.showError(t('socialAuthen.google.notSupport'));
+        ToastHelper.showError('Không hỗ trợ');
       } else {
-        // ToastHelper.showError(t('socialAuthen.google.other'));
+        ToastHelper.showError('Lỗi google authen');
       }
     }
   };

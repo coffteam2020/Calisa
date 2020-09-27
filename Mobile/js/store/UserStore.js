@@ -25,4 +25,10 @@ export class UserStore {
     this.cart = [...this.cart, item];
     console.log(JSON.stringify(this.cart));
   };
+  
+  @action.bound
+  removeProductToCart = (item) => {
+    this.cart = this.cart.filter(a => a != item);
+    console.log(JSON.stringify(this.cart));
+  };
 }

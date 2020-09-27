@@ -385,7 +385,7 @@ const NotificationScreen = (props) => {
           ]}
           resizeMethod="resize"
           resizeMode="cover">
-          <Searchbar style={styles.search} placeholder="Search" />
+          {/* <Searchbar style={styles.search} placeholder="Search" /> */}
           <View
             style={{
               flexDirection: 'row',
@@ -467,7 +467,7 @@ const styles = StyleSheet.create({
   },
   search: {
     width: '90%',
-    height: 35,
+    height: 50,
     marginTop: 15,
     alignSelf: 'center',
     alignItems: 'center',

@@ -191,7 +191,7 @@ const Detail = (props) => {
     <View style={[containerStyle.defaultBackground, {flex: 1}]}>
       <StatusBar barStyle={colorsApp.statusBar} />
       <ScrollView contentContainerStyle={{paddingBottom: 50}}>
-        <ImageBackground
+        {/* <ImageBackground
           source={images.header}
           style={[
             styles.content,
@@ -203,7 +203,7 @@ const Detail = (props) => {
           ]}
           resizeMethod="resize"
           resizeMode="cover"
-        />
+        /> */}
         <View
           style={{
             flexDirection: 'row',

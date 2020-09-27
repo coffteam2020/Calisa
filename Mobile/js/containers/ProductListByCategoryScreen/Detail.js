@@ -23,6 +23,7 @@ import GradientButton from '../../shared/components/Buttons/GradientButton';
 import {useStores} from '../../store/useStore';
 import {useObserver} from 'mobx-react';
 import {ScreenNames} from '../../route/ScreenNames';
+import { ToastHelper } from '../../shared/components/ToastHelper';
 
 const Detail = (props) => {
   const {colorsApp} = props.theme;
@@ -165,6 +166,7 @@ const Detail = (props) => {
         <GradientButton
           onPress={() => {
             userStore.addProductToCart(data);
+            ToastHelper.showSuccess('Thêm vào giỏ hàng thành công');
           }}
           text="Chọn mua"
           fromColor="red"
@@ -189,7 +191,7 @@ const Detail = (props) => {
     <View style={[containerStyle.defaultBackground, {flex: 1}]}>
       <StatusBar barStyle={colorsApp.statusBar} />
       <ScrollView contentContainerStyle={{paddingBottom: 50}}>
-        <ImageBackground
+        {/* <ImageBackground
           source={images.header}
           style={[
             styles.content,
@@ -201,7 +203,7 @@ const Detail = (props) => {
           ]}
           resizeMethod="resize"
           resizeMode="cover"
-        />
+        /> */}
         <View
           style={{
             flexDirection: 'row',

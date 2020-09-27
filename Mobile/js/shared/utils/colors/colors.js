@@ -13,7 +13,7 @@ export const colors = {
   iconGreen: '#00B162',
   black_twenty: '#00000033',
   black_five: '#0000000D',
-  black_seventy: '#000000B3',
+  black_seventy: '#00000033',
   black_lessy: '#9B9B9B',
   black_lightly: '#efefef',
   pink: '#FA4169',

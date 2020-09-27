@@ -19,7 +19,7 @@ class Service {
     return new Promise((res, rej) => {
       AxiosFetcher({
         method: 'GET',
-        customBaseUrl: 'http://calisa.ispa.io/api/v1/news/banner/',
+        customBaseUrl: 'news/banner/',
         url: '',
         hasBaseURL: true,
       })

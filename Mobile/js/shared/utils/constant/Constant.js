@@ -72,15 +72,15 @@ export default {
       'https://media.istockphoto.com/vectors/people-icon-vector-male-person-symbol-profile-circle-avatar-sign-in-vector-id959085942?k=6&m=959085942&s=170667a&w=0&h=f3Q3lGKve2kDDzr0DnscSQMZ01Dy19r6zbWIP9zuXRk=',
   },
   FIREBASE: {
-    apiKey: 'AIzaSyB986sj6oYmL0vkLn_jMqE1nGjEZjxWxT0',
-    authDomain: 'aes-project-f0298.firebaseio.com',
-    databaseURL: 'https://aes-project-f0298.firebaseio.com',
-    projectId: 'aes-project-f0298',
-    messagingSenderId: '1082040119697',
+    apiKey: 'AIzaSyARtnAJReKcu8Wua04_GxmHIT7__e_mdrM',
+    authDomain: 'calisaretail.firebaseio.com/',
+    databaseURL: 'https://calisaretail.firebaseio.com/',
+    projectId: 'calisaretail',
+    messagingSenderId: '104709577356',
     storageBucket: '',
   },
   FIREBASE_SPECIFIC: {
-    appIdAndroid: '1:1009498688082:android:5c0578920909fa5ad30a59',
+    appIdAndroid: '1:104709577356:android:a4e375cb10e6b869cd39a9',
     appIdiOS: '1:1082040119697:ios:f485cf8e8cae0a5c7d6a30',
   },
   SCHEMA: {
@@ -111,7 +111,7 @@ export default {
     CYPER: 'DOCTIFYYYY',
   },
   WEB_CLIENT_ID:
-    '104709577356-h4idg7blk2pgm13h9ubc5epq52nqcg3f.apps.googleusercontent.com',
+    '104709577356-r74lkglioskctr6715gjvrv5ijnvor7f.apps.googleusercontent.com',
   LOCATION_BACKGROUND_BTN: [0, 0.36, 1],
   COLOR_BACKGROUND_BTN: ['#665AAA', '#665AAA'],
   PROGRESS: ['#15B7B0', '#34EE99'],

@@ -1,49 +1,35 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react-native/no-inline-style */
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   StatusBar,
   View,
-  SafeAreaView,
-  ScrollView,
   StyleSheet,
   TouchableOpacity,
+  ScrollView,
   Image,
   ImageBackground,
 } from 'react-native';
-import {withTheme, Searchbar} from 'react-native-paper';
-import {containerStyle} from '../../themes/styles';
+import { withTheme, Searchbar } from 'react-native-paper';
+import { containerStyle } from '../../themes/styles';
 import TopBackground from '../../shared/components/TopBackground';
-import {ScreenHeight, ScreenWidth} from '../../shared/utils/dimension/Divices';
-import {useStores} from '../../store/useStore';
+import { ScreenHeight, ScreenWidth } from '../../shared/utils/dimension/Divices';
+import { useStores } from '../../store/useStore';
 import Swiper from 'react-native-swiper';
 import Service from '../../api/Service';
 import FastImage from 'react-native-fast-image';
-import {images} from '../../../assets';
 import YouTube from 'react-native-youtube';
+import { images } from '../../../assets';
 import TextNormal from '../../shared/components/Text/TextNormal';
-import {colors} from '../../shared/utils/colors/colors';
-import {NavigationService} from '../../navigation';
-import {ScreenNames} from '../../route/ScreenNames';
+import { colors } from '../../shared/utils/colors/colors';
+import { NavigationService } from '../../navigation';
+import { ScreenNames } from '../../route/ScreenNames';
 import Axios from 'axios';
 import { useObserver } from 'mobx-react';
-const MOCK_BANNER = [
-  {
-    index: 0,
-    imgUrl: 'https://www.barillacfn.com/m/articles/800x450/veg-diet.jpg',
-  },
-  {
-    index: 1,
-    imgUrl:
-      'https://covid19.lacounty.gov/wp-content/uploads/GettyImages-1128687123-1024x683.jpg',
-  },
-  {
-    index: 2,
-    imgUrl:
-      'https://res.cloudinary.com/grohealth/image/upload/c_fill,f_auto,fl_lossy,h_650,q_auto,w_1085,x_0,y_0/v1583843120/DCUK/Content/Surprisingly-High-Carb-Food.png',
-  },
-];
+import { useNavigation } from 'react-navigation-hooks';
+import Loading from '../../shared/components/Loading';
+import { ToastHelper } from '../../shared/components/ToastHelper';
 const MOCK_PRODUCT_BTNS = [
   {
     index: 0,
@@ -69,33 +55,30 @@ const MOCK_PRODUCT_BTNS = [
     image: images.ingredient,
   },
 ];
-const MOCK_PRODUCT_BANNERS = [
-  {
-    index: 0,
-    image: images.banner1,
-  },
-  {
-    index: 1,
-    image: images.banner2,
-  },
-];
 const HomeScreen = (props) => {
-  const {colorsApp} = props.theme;
+  const { colorsApp } = props.theme;
   const [banner, setBanner] = useState([]);
   const [news, setNews] = useState({});
   const [keyGood, setKeyGood] = useState('all');
   const [keySell, setKeySell] = useState('all');
-  const {userStore} = useStores();
-
+  const { userStore } = useStores();
+  const [isLoading, setLoading]= useState(false);
+  const navigation = useNavigation();
   useEffect(() => {
+    navigation.addListener('focus', () => {
+      console.log("dadsa");
+      getProducts();
+    })
     getProducts();
   }, []);
 
   const getProducts = async () => {
-    Axios.get('http://calisa.ispa.io/api/v1/news/banner').then((data) => {
+    Axios.get('https://dev.calisa.vn/api/v1/news/banner').then((data) => {
+
       setBanner(data?.data || []);
     });
-    Axios.get('https://calisa.ispa.io/api/v1/cate/show/3/news').then((data) => {
+    Axios.get('https://dev.calisa.api.vn/cate/show/3/news').then((data) => {
+      console.log(JSON.stringify(data));
       setNews(data?.data || []);
     });
     Service.getCategories().then((data) => {
@@ -117,7 +100,7 @@ const HomeScreen = (props) => {
             <View style={styles.slide1}>
               <FastImage
                 source={{
-                  uri: `http://calisa.ispa.io/img${item?.thumbs[0]?.path}`,
+                  uri: `http://dev.calisa.vn/img${item?.thumbs[0]?.path}`,
                 }}
                 style={styles.slide1}
                 resizeMode="cover"
@@ -125,21 +108,6 @@ const HomeScreen = (props) => {
             </View>
           );
         })}
-        {/*
-        <View style={styles.slide1}>
-          <FastImage
-            resizeMode="cover"
-            source={{uri: MOCK_BANNER[1].imgUrl}}
-            style={styles.slide1}
-          />
-        </View>
-        <View style={styles.slide1}>
-          <FastImage
-            resizeMode="cover"
-            source={{uri: MOCK_BANNER[2].imgUrl}}
-            style={styles.slide1}
-          />
-        </View> */}
       </Swiper>
     );
   };
@@ -162,22 +130,22 @@ const HomeScreen = (props) => {
                   if (item?.index === 0) {
                     NavigationService.navigate(
                       ScreenNames.ProductListByCategoryScreen,
-                      {key: 'listHotPrice', banner: banner, title: item?.title},
+                      { key: 'listHotPrice', banner: banner, title: item?.title },
                     );
                   } else if (item?.index === 1) {
                     NavigationService.navigate(
                       ScreenNames.ProductListByCategoryScreen,
-                      {key: 'listHotSell', banner: banner, title: item?.title},
+                      { key: 'listHotSell', banner: banner, title: item?.title },
                     );
                   } else if (item?.index === 2) {
                     NavigationService.navigate(
                       ScreenNames.ProductListByCategoryScreen,
-                      {key: 'listMenu', banner: banner, title: item?.title},
+                      { key: 'listMenu', banner: banner, title: item?.title },
                     );
                   } else if (item?.index === 3) {
                     NavigationService.navigate(
                       ScreenNames.ProductListByCategoryScreen,
-                      {key: 'listGuide', news: news, title: item?.title},
+                      { key: 'listGuide', news: news, title: item?.title },
                     );
                   }
                 }}
@@ -240,22 +208,13 @@ const HomeScreen = (props) => {
   const btnCategoriesBanner = () => {
     return (
       <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{
-          alignSelf: 'center',
-          paddingLeft: 20,
-          paddingEnd: 20,
-          marginEnd: 20,
-          marginTop: 10,
-        }}
-        style={{marginEnd: 20}}>
+        horizontal>
         {banner.map((item) => {
           return (
             <FastImage
               resizeMode="cover"
               source={{
-                uri: `http://calisa.ispa.io/img${item?.thumbs[0]?.path}`,
+                uri: `http://dev.calisa.vn/img${item?.thumbs[0]?.path}`,
               }}
               style={styles.slide2}
             />
@@ -270,14 +229,14 @@ const HomeScreen = (props) => {
         <View
           style={{
             width: ScreenWidth * 0.9,
-            height: 50,
-            backgroundColor: colors.blue,
+
           }}>
           <ImageBackground
             source={images.vector}
             style={{
               width: ScreenWidth * 0.9,
               height: 50,
+              backgroundColor: colors.blue,
               justifyContent: 'center',
               flexDirection: 'row',
               alignItems: 'center',
@@ -288,31 +247,31 @@ const HomeScreen = (props) => {
               text="Giá tốt trong tuần"
               style={[
                 containerStyle.textHeaderSmall,
-                {color: colors.whiteBackground},
+                { color: colors.whiteBackground },
                 containerStyle.defaultTextMarginEnd,
               ]}
             />
             <Image
               source={images.flash}
-              style={{width: 20, height: 50, marginEnd: 20, marginLeft: 20}}
+              style={{ width: 20, height: 50, marginEnd: 20, marginLeft: 20 }}
             />
             <TextNormal
               clickable
               onPress={() => {
                 NavigationService.navigate(
                   ScreenNames.ProductListByCategoryScreen,
-                  {key: 'listHotPrice', banner: banner, title: 'Giá tốt trong tuần'},
+                  { key: 'listHotPrice', banner: banner, title: 'Giá tốt trong tuần' },
                 );
               }}
               text="XEM THÊM"
               style={[
                 containerStyle.textDefaultContent,
-                {color: colors.whiteBackground, zIndex: 100},
+                { color: colors.whiteBackground, zIndex: 100 },
                 containerStyle.defaultTextMarginLeft,
               ]}
             />
           </ImageBackground>
-          <View style={{flexDirection: 'row', marginTop: 10}}>
+          <View style={{ flexDirection: 'row', marginTop: 10, marginBottom: 10 }}>
             <TouchableOpacity
               onPress={() => {
                 setKeyGood('all');
@@ -357,15 +316,15 @@ const HomeScreen = (props) => {
               );
             })}
           </View>
-          <View style={{marginTop: 0}}>
-            <ScrollView horizontal style={{height: 150}}>
+          <View style={{ marginTop: 0 }}>
+            <ScrollView horizontal style={{ height: 150 }}>
               {userStore?.categories?.listHotWeek
                 ?.slice()
                 .filter((a) => a?.categoryName === keyGood || keyGood === 'all')
                 .map((item) => {
                   let sale = `${Math.floor(
                     ((item?.priceSizes[0]?.salePrice || 0) * 100) /
-                      item?.priceSizes[0]?.price,
+                    item?.priceSizes[0]?.price,
                   )}`;
                   return (
                     <TouchableOpacity
@@ -378,6 +337,11 @@ const HomeScreen = (props) => {
                         borderRadius: 10,
                         borderWidth: 1,
                         // flexDirection: 'column',
+                      }}
+                      onPress={() => {
+                        NavigationService.navigate(ScreenNames.ProductListByCategoryScreen, {
+                          key: 'listHotPrice', banner: banner, title: item?.title
+                        })
                       }}>
                       <View>
                         <FastImage
@@ -392,7 +356,7 @@ const HomeScreen = (props) => {
                         />
                         <TextNormal
                           text={`${item?.priceSizes[0]?.salePrice} / kg`}
-                          style={{color: 'black', textAlign: 'center'}}
+                          style={{ color: 'black', textAlign: 'center' }}
                         />
                         {100 - sale > 0 && (
                           <View
@@ -410,7 +374,7 @@ const HomeScreen = (props) => {
                             }}>
                             <TextNormal
                               text={`${100 - sale}%`}
-                              style={{color: 'white', fontSize: 11}}
+                              style={{ color: 'white', fontSize: 11 }}
                             />
                           </View>
                         )}
@@ -420,9 +384,9 @@ const HomeScreen = (props) => {
                 })}
             </ScrollView>
           </View>
-          <View style={{marginTop: 20}}>
+          <View style={{ marginTop: 20 }}>
             <View
-              style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+              style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
               <TextNormal
                 text={'Hot sale'}
                 style={containerStyle.textHeaderSmall}
@@ -432,7 +396,7 @@ const HomeScreen = (props) => {
                 onPress={() => {
                   NavigationService.navigate(
                     ScreenNames.ProductListByCategoryScreen,
-                    {key: 'listHotSell', banner: banner, title: 'Hot sale'},
+                    { key: 'listHotSell', banner: banner, title: 'Hot sale' },
                   );
                 }}
                 text={'XEM THÊM'}
@@ -440,7 +404,7 @@ const HomeScreen = (props) => {
               />
             </View>
             <View
-              style={{flexDirection: 'row', marginTop: 10, marginBottom: 10}}>
+              style={{ flexDirection: 'row', marginTop: 10, marginBottom: 10 }}>
               <TouchableOpacity
                 onPress={() => {
                   setKeySell('all');
@@ -474,6 +438,7 @@ const HomeScreen = (props) => {
                       paddingEnd: 10,
                       paddingLeft: 10,
                       marginEnd: 10,
+                      zIndex: 1000,
                       borderColor: colors.black_seventy,
                       borderRadius: 10,
                       borderWidth: 1,
@@ -485,7 +450,7 @@ const HomeScreen = (props) => {
                 );
               })}
             </View>
-            <ScrollView horizontal style={{height: 150}}>
+            <ScrollView horizontal style={{ height: 150, width: '100%' }}>
               {userStore?.categories?.listHotSale
                 ?.slice()
                 ?.filter(
@@ -494,7 +459,7 @@ const HomeScreen = (props) => {
                 .map((item) => {
                   let sale = `${Math.floor(
                     ((item?.priceSizes[0]?.salePrice || 0) * 100) /
-                      item?.priceSizes[0]?.price,
+                    item?.priceSizes[0]?.price,
                   )}`;
                   return (
                     <TouchableOpacity
@@ -507,6 +472,10 @@ const HomeScreen = (props) => {
                         borderRadius: 10,
                         borderWidth: 1,
                         // flexDirection: 'column',
+                      }} onPress={() => {
+                        NavigationService.navigate(ScreenNames.ProductListByCategoryScreen, {
+                          key: 'listHotSell', banner: banner, title: item?.title
+                        })
                       }}>
                       <View>
                         <FastImage
@@ -521,7 +490,7 @@ const HomeScreen = (props) => {
                         />
                         <TextNormal
                           text={`${item?.priceSizes[0]?.salePrice} / kg`}
-                          style={{color: 'black', textAlign: 'center'}}
+                          style={{ color: 'black', textAlign: 'center' }}
                         />
                         {100 - sale > 0 && (
                           <View
@@ -539,7 +508,7 @@ const HomeScreen = (props) => {
                             }}>
                             <TextNormal
                               text={`${100 - sale}%`}
-                              style={{color: 'white', fontSize: 11}}
+                              style={{ color: 'white', fontSize: 11 }}
                             />
                           </View>
                         )}
@@ -553,6 +522,7 @@ const HomeScreen = (props) => {
                 justifyContent: 'space-between',
                 flexDirection: 'row',
                 marginTop: 20,
+                width: '100%'
               }}>
               <TextNormal
                 text={'Video dành cho bạn'}
@@ -563,38 +533,38 @@ const HomeScreen = (props) => {
                 onPress={() => {
                   NavigationService.navigate(
                     ScreenNames.ProductListByCategoryScreen,
-                    {key: 'listGuide', news: news, title: 'Video dành cho bạn'},
+                    { key: 'listGuide', news: news, title: 'Video dành cho bạn' },
                   );
                 }}
                 text={'XEM THÊM'}
                 style={containerStyle.textLink}
               />
-            </View>
-            <View>
-              <ScrollView horizontal style={{height: ScreenWidth * 0.7}}>
-                {(news?.news || [])?.map((item) => {
-                  let id =
-                    (item?.video_url || 'watch?v=a')?.split('watch?v=')[1] ||
-                    '';
-                  console.log(id);
-                  return (
-                    <YouTube
-                      apiKey={'AIzaSyD-VuAxJLCUUmh0rAtiZytV2iI_t2sOh50'}
-                      videoId={'sfJcq72X4b8' || ''} // The YouTube video ID
-                      play={false} // control playback of video with true/false
-                      fullscreen={false} // control whether the video should play in fullscreen or inline
-                      loop={false} // control whether the video should loop when ended
-                      onReady={() => {}}
-                      resumePlayAndroid={false}
-                      onChangeState={() => {}}
-                      onChangeQuality={() => {}}
-                      onError={() => {}}
-                      style={[styles.video]}
-                      resumePlayAndroid={false}
-                    />
-                  );
-                })}
-              </ScrollView>
+              <View>
+                <ScrollView horizontal style={{ height: ScreenWidth * 0.7 }}>
+                  {(news?.news || [])?.map((item) => {
+                    let id =
+                      (item?.video_url || 'watch?v=a')?.split('watch?v=')[1] ||
+                      '';
+                    console.log(id);
+                    return (
+                      <YouTube
+                        apiKey={'AIzaSyD-VuAxJLCUUmh0rAtiZytV2iI_t2sOh50'}
+                        videoId={id || ''} // The YouTube video ID
+                        play={false} // control playback of video with true/false
+                        fullscreen={false} // control whether the video should play in fullscreen or inline
+                        loop={false} // control whether the video should loop when ended
+                        onReady={() => { }}
+                        resumePlayAndroid={false}
+                        onChangeState={() => { }}
+                        onChangeQuality={() => { }}
+                        onError={() => { }}
+                        style={[styles.video]}
+                        resumePlayAndroid={false}
+                      />
+                    );
+                  })}
+                </ScrollView>
+              </View>
             </View>
           </View>
         </View>
@@ -603,23 +573,23 @@ const HomeScreen = (props) => {
   };
 
   return useObserver(() => (
-    <View style={[containerStyle.defaultBackground]}>
-      <StatusBar barStyle={colorsApp.statusBar} />
-
-      <ScrollView
-        keyboardShouldPersistTaps="handled"
-        contentContainerStyle={{paddingBottom: 1000}}
-        style={{height: '100%', paddingBottom: 1000}}>
-        <TopBackground />
-        <View style={styles.container}>
-          <Searchbar style={styles.search} placeholder="Search" />
+    <View style={{ flex: 1, backgroundColor: 'white' }}>
+      <View>
+        <ScrollView style={{ height: '100%', padding: 20, paddingTop: 40 }}>
+          <Searchbar placeholder="Search" onSubmitEditing={()=>{
+            setLoading(true);
+            setTimeout(()=>{
+              setLoading(false);
+              ToastHelper.showError('Không thấy dữ liệu bạn cần tìm');
+            })
+          }}/>
           {swipe()}
           {btnCategories()}
           {btnCategoriesBanner()}
           {productDealDaily()}
-          {/* {renderHotdeal()} */}
-        </View>
-      </ScrollView>
+          {isLoading && <Loading />}
+        </ScrollView>
+      </View>
     </View>
   ));
 };
@@ -635,11 +605,12 @@ const styles = StyleSheet.create({
   },
   slide2: {
     width: ScreenWidth * 0.9,
+    height: 200,
     alignSelf: 'center',
-    height: ScreenWidth * 0.5,
     borderRadius: 20,
     marginEnd: 20,
     marginBottom: 10,
+    marginTop: 20,
     overflow: 'hidden',
   },
   swipe: {
@@ -652,7 +623,7 @@ const styles = StyleSheet.create({
     marginTop: 55,
   },
   container: {
-    flex: 1,
+    // flex: 1,
     paddingTop: ScreenHeight / 10,
     alignItems: 'center',
     // height: '100%',
