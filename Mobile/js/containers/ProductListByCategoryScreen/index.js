@@ -485,7 +485,7 @@ const styles = StyleSheet.create({
   search: {
     width: '90%',
     height: 50,
-    // marginTop: 15,
+    marginTop: 15,
     alignSelf: 'center',
     alignItems: 'center',
   },

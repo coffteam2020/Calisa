@@ -33,6 +33,7 @@
 		75A4910F530C4A0BBEA6CB56 /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8A2107302E74FD7B4D760BF /* Nunito-BlackItalic.ttf */; };
 		76B4CC0B6E334C0F9FB6F342 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08BA599FE89A4C61AEF58389 /* Nunito-ExtraBold.ttf */; };
 		7BBA1ADF18624492BB7520BD /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C016B4D5DF514946B4BB5F4D /* Nunito-ExtraBoldItalic.ttf */; };
+		7E4F177325222F870049DE88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E4F177225222F870049DE88 /* GoogleService-Info.plist */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		81E45FE821854DEEB43DD75B /* PlayfairDisplay-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B176A3D98C413B8CA64B29 /* PlayfairDisplay-ExtraBold.ttf */; };
 		8415C94830224B50A728E955 /* PlayfairDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D1AA450AD44B0FB9D6A521 /* PlayfairDisplay-Medium.ttf */; };
@@ -59,7 +60,6 @@
 		F9870DAA82494921895BEF5E /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7411AF39B59748D48CDFB4AF /* Nunito-ExtraLight.ttf */; };
 		FA80398B789749FC8D64DA08 /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBE4FF4D027B4687A74EE50A /* Nunito-ExtraLightItalic.ttf */; };
 		FCA4251DA08E49F2B6315455 /* PlayfairDisplay-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FB175CDDE254D4DBFC11C57 /* PlayfairDisplay-SemiBold.ttf */; };
-		FD2E280024F6B2DE0000F4DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD2E27FF24F6B2DE0000F4DC /* GoogleService-Info.plist */; };
 		FF05896536704FFE997DDBA2 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE4097A9448D4E21877B29AC /* Nunito-Black.ttf */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +124,7 @@
 		759B19EB8A4E443EC85ECEC2 /* Pods-Mobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Mobile-tvOSTests/Pods-Mobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		77DB0120A6044BF2AD31610F /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		7E142E7342A76F9A1474BF74 /* libPods-Mobile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mobile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E4F177225222F870049DE88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../AppIcons/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F18AFC5FDD747E5949C225D /* Proxima Nova Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Thin.otf"; path = "../assets/fonts/Proxima Nova Thin.otf"; sourceTree = "<group>"; };
 		7FB175CDDE254D4DBFC11C57 /* PlayfairDisplay-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-SemiBold.ttf"; path = "../assets/fonts/PlayfairDisplay-SemiBold.ttf"; sourceTree = "<group>"; };
 		7FEF433C4E674B33AAAF426C /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBoldItalic.ttf"; path = "../assets/fonts/Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -164,7 +165,6 @@
 		F7A0C6B82BEC4AE79BAA3F90 /* Proxima Nova Alt Extra Condensed Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Proxima Nova Alt Extra Condensed Light.otf"; path = "../assets/fonts/Proxima Nova Alt Extra Condensed Light.otf"; sourceTree = "<group>"; };
 		F8A2107302E74FD7B4D760BF /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-BlackItalic.ttf"; path = "../assets/fonts/Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
 		FB6909B02B6140CFBBB337D1 /* Proxima.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Proxima.ttf; path = ../assets/fonts/Proxima.ttf; sourceTree = "<group>"; };
-		FD2E27FF24F6B2DE0000F4DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,7 +223,7 @@
 		13B07FAE1A68108700A75B9A /* Mobile */ = {
 			isa = PBXGroup;
 			children = (
-				FD2E27FF24F6B2DE0000F4DC /* GoogleService-Info.plist */,
+				7E4F177225222F870049DE88 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -517,7 +517,7 @@
 				7BBA1ADF18624492BB7520BD /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				F9870DAA82494921895BEF5E /* Nunito-ExtraLight.ttf in Resources */,
 				FA80398B789749FC8D64DA08 /* Nunito-ExtraLightItalic.ttf in Resources */,
-				FD2E280024F6B2DE0000F4DC /* GoogleService-Info.plist in Resources */,
+				7E4F177325222F870049DE88 /* GoogleService-Info.plist in Resources */,
 				CD8A8E0788214D29AD5F1A08 /* Nunito-Italic.ttf in Resources */,
 				8ED7A92BD0CD4A7E8C1BCD8A /* Nunito-Light.ttf in Resources */,
 				2F2B74179B1C4FEBAC1405D6 /* Nunito-LightItalic.ttf in Resources */,
@@ -995,7 +995,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 2TKJ6R48N9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Mobile/Info.plist;
@@ -1019,7 +1019,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 2TKJ6R48N9;
 				INFOPLIST_FILE = Mobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

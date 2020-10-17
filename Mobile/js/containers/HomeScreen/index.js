@@ -65,7 +65,7 @@ const HomeScreen = (props) => {
   const [isLoading, setLoading]= useState(false);
   const navigation = useNavigation();
   useEffect(() => {
-    navigation.addListener('focus', () => {
+    navigation.addListener('refocus', () => {
       console.log("dadsa");
       getProducts();
     })
@@ -73,17 +73,17 @@ const HomeScreen = (props) => {
   }, []);
 
   const getProducts = async () => {
-    Axios.get('https://dev.calisa.vn/api/v1/news/banner').then((data) => {
+    // Axios.get('https://dev.calisa.vn/api/v1/news/banner').then((data) => {
 
-      setBanner(data?.data || []);
-    });
-    Axios.get('https://dev.calisa.api.vn/cate/show/3/news').then((data) => {
+    //   setBanner(data?.data || []);
+    // });
+    Axios.get('https://calisa.api.vn/cate/show/3/news').then((data) => {
       console.log(JSON.stringify(data));
       setNews(data?.data || []);
     });
-    Service.getCategories().then((data) => {
-      userStore.setCategories(data?.content || {});
-    });
+    // Service.getCategories().then((data) => {
+    //   userStore.setCategories(data?.content || {});
+    // });
   };
   const swipe = () => {
     return (

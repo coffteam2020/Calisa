@@ -72,10 +72,10 @@ export default {
       'https://media.istockphoto.com/vectors/people-icon-vector-male-person-symbol-profile-circle-avatar-sign-in-vector-id959085942?k=6&m=959085942&s=170667a&w=0&h=f3Q3lGKve2kDDzr0DnscSQMZ01Dy19r6zbWIP9zuXRk=',
   },
   FIREBASE: {
-    apiKey: 'AIzaSyARtnAJReKcu8Wua04_GxmHIT7__e_mdrM',
-    authDomain: 'calisaretail.firebaseio.com/',
-    databaseURL: 'https://calisaretail.firebaseio.com/',
-    projectId: 'calisaretail',
+    apiKey: 'AIzaSyAtbS4jnxZB_eSkouBxjY3owoDg4u5DeS8',
+    authDomain: 'calisa-277802.firebaseio.com/',
+    databaseURL: 'https://calisa-277802.firebaseio.com/',
+    projectId: 'calisa-277802',
     messagingSenderId: '104709577356',
     storageBucket: '',
   },
@@ -111,7 +111,7 @@ export default {
     CYPER: 'DOCTIFYYYY',
   },
   WEB_CLIENT_ID:
-    '104709577356-r74lkglioskctr6715gjvrv5ijnvor7f.apps.googleusercontent.com',
+    '68233999976-nqu0kldms1qchkluaupo6i2rp0j7r2d3.apps.googleusercontent.com',
   LOCATION_BACKGROUND_BTN: [0, 0.36, 1],
   COLOR_BACKGROUND_BTN: ['#665AAA', '#665AAA'],
   PROGRESS: ['#15B7B0', '#34EE99'],

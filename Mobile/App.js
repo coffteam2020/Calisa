@@ -14,7 +14,7 @@ import {Appearance} from 'react-native-appearance';
 import {CustomDarkTheme, CustomLightTheme} from './js/themes/index';
 import {NavigationService} from './js/navigation';
 import NetInfo from '@react-native-community/netinfo';
-// import firebase from '@react-native-firebase/app';
+import firebase from '@react-native-firebase/app';
 import ModalConnection from './js/shared/components/Modal/ModalConnection';
 import Constant from './js/shared/utils/constant/Constant';
 import {useObserver} from 'mobx-react';
@@ -67,9 +67,9 @@ const App = () => {
   const connectFirebase = async () => {
     // Clear room local
     IALocalStorage.setRoom('');
-    // if (!firebase.apps.length) {
-    //   firebase.initializeApp(firebaseConfig);
-    // }
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
     // await firebase.messaging().registerDeviceForRemoteMessages();
     // await firebase.messaging().registerForRemoteNotifications();
     // notificationInitialize(userStore, currentScreen);

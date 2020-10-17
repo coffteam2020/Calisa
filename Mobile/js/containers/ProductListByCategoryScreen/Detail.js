@@ -6,7 +6,7 @@ import {
   SafeAreaView,
   ImageBackground,
   StyleSheet,
-  TouchableOpacity,
+  TouchableOpacity, Platform
 } from 'react-native';
 import {withTheme} from 'react-native-paper';
 import {containerStyle} from './../../themes/styles';
@@ -27,7 +27,8 @@ import { ToastHelper } from '../../shared/components/ToastHelper';
 
 const Detail = (props) => {
   const {colorsApp} = props.theme;
-  const [img, setImg] = useState('');
+  const url = props.navigation.state.params.data?.item?.image?.url;
+  const [img, setImg] = useState(url || '');
   const {userStore} = useStores();
   const [size, setSize] = useState('0');
   const [type, setType] = useState({});
@@ -40,7 +41,7 @@ const Detail = (props) => {
       <View>
         <FastImage
           source={{
-            uri: data?.image?.url
+            uri: img
           }}
           style={styles.slide1}
           resizeMode="cover"
@@ -210,6 +211,7 @@ const Detail = (props) => {
             justifyContent: 'space-between',
             alignItems: 'center',
             margin: 10,
+            marginTop: Platform.OS === 'ios' ? 40 : 15,
           }}>
           <TouchableOpacity onPress={() => NavigationService.goBack()}>
             <Ionicons name="arrow-back" size={30} color={'black'} />
